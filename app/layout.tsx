@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Raleway, Lora } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-    variable: '--font-geist-sans',
+const ralewaySans = Raleway({
+    variable: '--font-raleway-sans',
     subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
+const loraSerif = Lora({
+    variable: '--font-lora',
     subsets: ['latin'],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${ralewaySans.variable} ${loraSerif.variable} antialiased font-raleway bg-white dark:bg-neutral-900 flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-0 text-neutral-900`}
             >
                 {children}
             </body>
