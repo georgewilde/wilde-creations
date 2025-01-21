@@ -86,7 +86,7 @@ export default function Home() {
                                 delivering high-quality, impactful products.
                             </p>
                         </div>
-                        <div className="md:min-w-[300px] hidden md:block">
+                        <div className="md hidden md:block">
                             <Image
                                 src="/images/profile.jpg"
                                 alt="George Wilde"
@@ -188,7 +188,7 @@ export default function Home() {
                     </ul>
                 </section>
                 <section className="bg-neutral-200 flex w-full p-4 md:p-10 flex-row flex-wrap justify-center">
-                    <div className="flex items-center flex-col max-w-[400px] min-w-[300px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/steven-jones.jpg"
@@ -208,7 +208,7 @@ export default function Home() {
                         <div className="text-xs">VP Digital Consulting</div>
                         <div className="text-xs">Ensono</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] min-w-[300px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/fiona-collis.jpg"
@@ -226,7 +226,7 @@ export default function Home() {
                         <div className="text-xs">Operations Director</div>
                         <div className="text-xs">Ensono Digital</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] min-w-[300px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/andy-mcmillan.jpg"
@@ -245,7 +245,7 @@ export default function Home() {
                         <div className="text-xs">Digital Product Manager</div>
                         <div className="text-xs">E.ON</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] min-w-[300px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/kully-chatha.jpg"
@@ -264,7 +264,7 @@ export default function Home() {
                         <div className="text-xs">Senior Solution Architect</div>
                         <div className="text-xs">E.ON</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] min-w-[300px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/farooq-ali.jpg"
@@ -296,14 +296,14 @@ export default function Home() {
                             Here are some recent projects I have had the
                             pleasure of helping deliver.
                         </p>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-7 justify-center">
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-7 justify-center">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/the-gym-group.png"
                                     alt="The Gym Group"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -328,13 +328,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/pay-uk.png"
                                     alt="Pay.uk"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -351,13 +351,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/next.png"
                                     alt="NEXT"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -371,13 +371,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/purplebricks.png"
                                     alt="Purplebricks"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -394,13 +394,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/socket-energy.png"
                                     alt="Socket Energy"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -415,13 +415,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/my-npower.jpg"
                                     alt="My Npower"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -438,13 +438,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/EON-see.png"
                                     alt="E.ON See"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -461,13 +461,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-stretch flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/MINI-offers.png"
                                     alt="Mini Offers"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -481,13 +481,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/showroom.png"
                                     alt="Showroom Suite"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -503,13 +503,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/halo.png"
                                     alt="Halo Case Management"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
@@ -523,13 +523,13 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/spark.png"
                                     alt="Spark Compliance"
-                                    width={400}
-                                    height={400}
+                                    width={450}
+                                    height={450}
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
