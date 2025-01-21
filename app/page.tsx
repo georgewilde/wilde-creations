@@ -55,7 +55,7 @@ export default function Home() {
                         Hi, I&apos;m George Wilde
                     </h1>
                     <div className="flex flex-row">
-                        <div className="mr-6 text-justify">
+                        <div className="md:mr-6 text-justify">
                             <p>
                                 I am an accomplished technology leader with a
                                 consistent track record of guiding
@@ -86,7 +86,7 @@ export default function Home() {
                                 delivering high-quality, impactful products.
                             </p>
                         </div>
-                        <div className="min-w-[300px]">
+                        <div className="md:min-w-[300px] hidden md:block">
                             <Image
                                 src="/images/profile.jpg"
                                 alt="George Wilde"
@@ -296,21 +296,188 @@ export default function Home() {
                             Here are some recent projects I have had the
                             pleasure of helping deliver.
                         </p>
-                        <ul className="list-disc list-inside">
-                            <li>
-                                The Gym Group Ecommerce Platform and Membership
-                                Area
+                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-7 justify-center">
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/the-gym-group.png"
+                                    alt="The Gym Group"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        The Gym Group
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
                             </li>
-                            <li>Pay.UK API Platform</li>
-                            <li>Next Ecommerce Platform</li>
-                            <li>My Purplebricks</li>
-                            <li>Socket Energy</li>
-                            <li>My Npower</li>
-                            <li>E.ON See</li>
-                            <li>Mini Offers</li>
-                            <li>Showroom Suite</li>
-                            <li>Halo Case Management</li>
-                            <li>Spark Compliance</li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/pay-uk.png"
+                                    alt="Pay.uk"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Pay.UK API Platform
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/next.png"
+                                    alt="NEXT"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Next
+                                    </div>
+                                    <div>Ecommerce Platform</div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/purplebricks.png"
+                                    alt="Purplebricks"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Purplebricks
+                                    </div>
+                                    <div>My Purplebricks</div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/socket-energy.png"
+                                    alt="Socket Energy"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Socket Energy
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/my-npower.jpg"
+                                    alt="My Npower"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        My npower
+                                    </div>
+                                    <div>My npower</div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/EON-see.png"
+                                    alt="E.ON See"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        E.ON See
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="flex items-stretch flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/MINI-offers.png"
+                                    alt="Mini Offers"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Mini Offers
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/showroom.png"
+                                    alt="Showroom Suite"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Showroom Suite
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/halo.png"
+                                    alt="Halo Case Management"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Halo Case Management
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
+                                <Image
+                                    className=""
+                                    src="/images/projects/spark.png"
+                                    alt="Spark Compliance"
+                                    width={400}
+                                    height={400}
+                                />
+                                <div className="flex flex-col p-4">
+                                    <div className="text-lg font-semibold mb-2">
+                                        Spark Compliance
+                                    </div>
+                                    <div>
+                                        Ecommerce Platform and Membership Area
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </section>
