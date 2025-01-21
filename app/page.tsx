@@ -299,7 +299,7 @@ export default function Home() {
                         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-7 justify-center">
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/the-gym-group.png"
                                     alt="The Gym Group"
                                     width={400}
@@ -330,7 +330,7 @@ export default function Home() {
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/pay-uk.png"
                                     alt="Pay.uk"
                                     width={400}
@@ -353,7 +353,7 @@ export default function Home() {
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/next.png"
                                     alt="NEXT"
                                     width={400}
@@ -373,7 +373,7 @@ export default function Home() {
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/purplebricks.png"
                                     alt="Purplebricks"
                                     width={400}
@@ -386,11 +386,17 @@ export default function Home() {
                                     <div>
                                         My Purplebricks Account Management
                                     </div>
+                                    <div className="text-sm mt-4">
+                                        Platform used by customers to manage
+                                        their property sales or lettings.
+                                        Including sales negotiations, property
+                                        management and arranging viewings.
+                                    </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/socket-energy.png"
                                     alt="Socket Energy"
                                     width={400}
@@ -400,14 +406,18 @@ export default function Home() {
                                     <div className="text-lg font-semibold mb-2">
                                         Socket Energy
                                     </div>
-                                    <div>
-                                        Ecommerce Platform and Membership Area
+                                    <div>Brochure and Account Management</div>
+                                    <div className="text-sm mt-4">
+                                        Integrated platform for this disruptor
+                                        energy provider developed by E.ON,
+                                        including CRM, CMS and energy industry
+                                        integrations.
                                     </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/my-npower.jpg"
                                     alt="My Npower"
                                     width={400}
@@ -415,14 +425,22 @@ export default function Home() {
                                 />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
-                                        My npower
+                                        npower
                                     </div>
-                                    <div>My npower</div>
+                                    <div>
+                                        Customer Account Management Platform
+                                    </div>
+                                    <div className="text-sm mt-4">
+                                        Greenfield project to allow customers to
+                                        manage their energy accounts. Providing
+                                        meter readings, bills &amp; payments and
+                                        future energy forecasting.
+                                    </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/EON-see.png"
                                     alt="E.ON See"
                                     width={400}
@@ -435,11 +453,17 @@ export default function Home() {
                                     <div>
                                         Ecommerce Platform and Membership Area
                                     </div>
+                                    <div className="text-sm mt-4">
+                                        Account management system to help
+                                        residential customers gain insights
+                                        about their energy using real-time usage
+                                        data.
+                                    </div>
                                 </div>
                             </li>
                             <li className="flex items-stretch flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/MINI-offers.png"
                                     alt="Mini Offers"
                                     width={400}
@@ -449,14 +473,17 @@ export default function Home() {
                                     <div className="text-lg font-semibold mb-2">
                                         Mini Offers
                                     </div>
-                                    <div>
-                                        Ecommerce Platform and Membership Area
+                                    <div>Marketing Platform</div>
+                                    <div className="text-sm mt-4">
+                                        New car offers platform for the iconic
+                                        MINI brand driven by custom stock
+                                        management and CMS systems.
                                     </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/showroom.png"
                                     alt="Showroom Suite"
                                     width={400}
@@ -467,13 +494,18 @@ export default function Home() {
                                         Showroom Suite
                                     </div>
                                     <div>
-                                        Ecommerce Platform and Membership Area
+                                        Automotive Dealership Management Portal
+                                    </div>
+                                    <div className="text-sm mt-4">
+                                        Innovative motor finance dealer portal
+                                        that delivers the tools to increase lead
+                                        generation and deal conversion rates.
                                     </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/halo.png"
                                     alt="Halo Case Management"
                                     width={400}
@@ -483,14 +515,17 @@ export default function Home() {
                                     <div className="text-lg font-semibold mb-2">
                                         Halo Case Management
                                     </div>
-                                    <div>
-                                        Ecommerce Platform and Membership Area
+                                    <div>Case Management and CRM Platform</div>
+                                    <div className="text-sm mt-4">
+                                        Specialised substance misuse system used
+                                        by some of the largest addiction
+                                        services across the UK.
                                     </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
                                 <Image
-                                    className=""
+                                    className="rounded-t-md"
                                     src="/images/projects/spark.png"
                                     alt="Spark Compliance"
                                     width={400}
@@ -501,7 +536,13 @@ export default function Home() {
                                         Spark Compliance
                                     </div>
                                     <div>
-                                        Ecommerce Platform and Membership Area
+                                        Incident tracking and Quality Control
+                                        System
+                                    </div>
+                                    <div className="text-sm mt-4">
+                                        Audit and quality improvement system for
+                                        UK charities and public bodies who have
+                                        responsibility to report to the CQC.
                                     </div>
                                 </div>
                             </li>
