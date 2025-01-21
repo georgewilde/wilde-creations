@@ -305,12 +305,26 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         The Gym Group
                                     </div>
                                     <div>
-                                        Ecommerce Platform and Membership Area
+                                        Ecommerce, Payment &amp; Identity
+                                        Platform
+                                    </div>
+                                    <div className="text-sm mt-4">
+                                        Replatformed the digital estate for
+                                        Europe&apos;s 5th largest gym operator.
+                                        Read the{' '}
+                                        <a
+                                            target="_blank"
+                                            className="underline"
+                                            href="https://www.ensono.com/results/client-stories/supporting-growth-improving-customer-experience-and-increasing-business-agility-for-the-gym-group/"
+                                        >
+                                            case study
+                                        </a>
+                                        .
                                     </div>
                                 </div>
                             </li>
@@ -322,12 +336,18 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
-                                        Pay.UK API Platform
+                                        Pay.UK
                                     </div>
                                     <div>
-                                        Ecommerce Platform and Membership Area
+                                        Inter-Banking Fraud Prevention Platform
+                                    </div>
+                                    <div className="text-sm mt-4">
+                                        Directory and API management system
+                                        provided by the UK&apos;s leading retail
+                                        payments authority to help prevent fraud
+                                        in the banking system.
                                     </div>
                                 </div>
                             </li>
@@ -339,11 +359,16 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Next
                                     </div>
                                     <div>Ecommerce Platform</div>
+                                    <div className="text-sm mt-4">
+                                        Mainframe to microservices migration for
+                                        this multi-brand leading global
+                                        retailer.
+                                    </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
@@ -354,11 +379,13 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Purplebricks
                                     </div>
-                                    <div>My Purplebricks</div>
+                                    <div>
+                                        My Purplebricks Account Management
+                                    </div>
                                 </div>
                             </li>
                             <li className="flex items-center flex-col max-w-[400px] mx-12 my-4 border border-neutral-400 rounded-md">
@@ -369,7 +396,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Socket Energy
                                     </div>
@@ -386,7 +413,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         My npower
                                     </div>
@@ -401,7 +428,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         E.ON See
                                     </div>
@@ -418,7 +445,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Mini Offers
                                     </div>
@@ -435,7 +462,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Showroom Suite
                                     </div>
@@ -452,7 +479,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Halo Case Management
                                     </div>
@@ -469,7 +496,7 @@ export default function Home() {
                                     width={400}
                                     height={400}
                                 />
-                                <div className="flex flex-col p-4">
+                                <div className="flex flex-col p-4 w-full">
                                     <div className="text-lg font-semibold mb-2">
                                         Spark Compliance
                                     </div>
