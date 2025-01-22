@@ -86,7 +86,7 @@ export default function Home() {
                                 delivering high-quality, impactful products.
                             </p>
                         </div>
-                        <div className="md hidden md:inline-block w-full">
+                        <div className="hidden md:block w-full min-w-[200px]">
                             <Image
                                 src="/images/profile.jpg"
                                 alt="George Wilde"
