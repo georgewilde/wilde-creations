@@ -552,15 +552,15 @@ export default function Home() {
                 <section className="w-full">
                     <div className="mx-6">
                         <h2
-                            className="text-4xl font-semibold tracking-tight mb-4 mt-10"
+                            className="text-4xl font-semibold tracking-tight mb-6 mt-10"
                             id="blog"
                         >
                             Blog
                         </h2>
                         <ul className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-7 justify-center mt-4">
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md">
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
                                 <a
-                                    className="m-6"
+                                    className="m-6 w-full"
                                     target="_blank"
                                     href="https://www.ensono.com/insights-and-news/expert-opinions/transforming-your-digital-strategy-with-a-headless-cms/"
                                 >
@@ -584,83 +584,222 @@ export default function Home() {
                                         Continue reading
                                     </p>
                                 </a>
-                                <div className="min-w-[250px] bg-orange-700 flex h-full items-center">
+                                <div className="min-w-[250px] bg-orange-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
                                     <Image
                                         className="m-10"
                                         src="/images/blog/head.svg"
+                                        alt="Head"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
+                            </li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                                <a
+                                    className="m-6 w-full"
+                                    target="_blank"
+                                    href="https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/"
+                                >
+                                    <div className="text-xl font-semibold">
+                                        Leveraging Data Maturity to Personalize
+                                        Retail Shopping Experiences
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
+                                </a>
+                                <div className="min-w-[250px] bg-blue-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/cart.svg"
+                                        alt="Cart"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
+                            </li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                                <a
+                                    className="m-6 w-full"
+                                    target="_blank"
+                                    href="https://medium.com/@george_wilde/introducing-the-safe-assignment-operator-in-javascript-59a6c8fcd6ce"
+                                >
+                                    <div className="text-xl font-semibold">
+                                        Introducing the Safe Assignment Operator
+                                        in JavaScript
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
+                                </a>
+                                <div className="min-w-[250px] bg-amber-500 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/safe.svg"
+                                        alt="Safe"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
+                            </li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                                <a
+                                    className="m-6 w-full"
+                                    target="_blank"
+                                    href="https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0"
+                                >
+                                    <div className="text-xl font-semibold">
+                                        A Guide To Writing Effective User
+                                        Stories
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
+                                </a>
+                                <div className="min-w-[250px] bg-green-600 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/stories.svg"
+                                        alt="Stories"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
+                            </li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                                <a
+                                    className="m-6 w-full"
+                                    target="_blank"
+                                    href="https://medium.com/@george_wilde/the-10-books-every-software-developer-should-read-5b6bd08755cc"
+                                >
+                                    <div className="text-xl font-semibold">
+                                        The 10 books every software developer
+                                        should read
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
+                                </a>
+                                <div className="min-w-[250px] bg-cyan-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/book.svg"
                                         alt="Book"
                                         width={250}
                                         height={250}
                                     />
                                 </div>
                             </li>
-                            <li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
                                 <a
-                                    target="_blank"
-                                    href="https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/"
-                                >
-                                    Leveraging Data Maturity to Personalize
-                                    Retail Shopping Experiences
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/introducing-the-safe-assignment-operator-in-javascript-59a6c8fcd6ce"
-                                >
-                                    Introducing the Safe Assignment Operator in
-                                    JavaScript
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0"
-                                >
-                                    A Guide To Writing Effective User Stories
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/the-10-books-every-software-developer-should-read-5b6bd08755cc"
-                                >
-                                    The 10 books every software developer should
-                                    read
-                                </a>
-                            </li>
-                            <li>
-                                <a
+                                    className="m-6 w-full"
                                     target="_blank"
                                     href="https://medium.com/@george_wilde/why-sizing-user-stories-will-save-you-time-6e32561cfd81"
                                 >
-                                    Why sizing user stories will save you time
+                                    <div className="text-xl font-semibold">
+                                        Why sizing user stories will save you
+                                        time
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
                                 </a>
+                                <div className="min-w-[250px] bg-fuchsia-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/measure.svg"
+                                        alt="Measure"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
                             </li>
-                            <li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
                                 <a
+                                    className="m-6 w-full"
                                     target="_blank"
                                     href="https://medium.com/@george_wilde/top-7-podcasts-of-2016-for-business-minded-programmers-6620af1cba43"
                                 >
-                                    Top 7 podcasts for business minded
-                                    programmers
+                                    <div className="text-xl font-semibold">
+                                        Top 7 podcasts for business minded
+                                        programmers
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
                                 </a>
+                                <div className="min-w-[250px] bg-emerald-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/podcast.svg"
+                                        alt="Podcast"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
                             </li>
-                            <li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
                                 <a
+                                    className="m-6 w-full"
                                     target="_blank"
                                     href="https://medium.com/@george_wilde/how-to-setup-a-custom-domain-on-github-pages-c481028c4fa"
                                 >
-                                    How to setup a custom domain on GitHub Pages
+                                    <div className="text-xl font-semibold">
+                                        How to setup a custom domain on GitHub
+                                        Pages
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
                                 </a>
+                                <div className="min-w-[250px] bg-pink-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/dns.svg"
+                                        alt="DNS"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
                             </li>
-                            <li>
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
                                 <a
+                                    className="m-6 w-full"
                                     target="_blank"
                                     href="https://medium.com/@george_wilde/how-to-start-your-new-project-with-scrum-4136c93d1a25"
                                 >
-                                    How to start your new project with Scrum
+                                    <div className="text-xl font-semibold">
+                                        How to start your new project with Scrum
+                                    </div>
+                                    <p className="my-4">TBC</p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
                                 </a>
+                                <div className="min-w-[250px] bg-violet-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/flag.svg"
+                                        alt="Flag"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
                             </li>
                         </ul>
                     </div>
