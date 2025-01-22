@@ -1,46 +1,55 @@
+'use client';
+
 import Image from 'next/image';
+import React, { useState } from 'react';
 
 export default function Home() {
+    const currentYear = new Date().getFullYear();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <>
             <header className="w-full">
-                <nav className="lg:mb-16 mb-12 py-5 mx-12">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between">
-                        <div className="flex items-center">
+                <nav className="mb-12 lg:mb-16 py-5 mx-4 md:mx-12">
+                    <div className="flex flex-row md:items-center justify-between">
+                        <a
+                            className="text-3xl font-semibold tracking-tight"
+                            href="/"
+                        >
+                            <Image
+                                src="/images/logo.png"
+                                alt="Wilde Creations"
+                                width={128}
+                                height={56}
+                            />
+                        </a>
+                        <div className="flex-row gap-6 mt-6 md:mt-0 items-center uppercase hidden sm:flex">
                             <a
-                                className="text-3xl font-semibold tracking-tight"
-                                href="/"
-                            >
-                                Wilde Creations
-                            </a>
-                        </div>
-                        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
-                            <a
-                                className="transition-all flex align-middle relative uppercase hover:text-black"
+                                className="transition-all hover:text-blue-800"
                                 href="/"
                             >
                                 Home
                             </a>
                             <a
-                                className="transition-all hover:text-neutral-800 flex align-middle relative uppercase"
+                                className="transition-all hover:text-blue-800"
                                 href="#skills"
                             >
                                 Skills
                             </a>
                             <a
-                                className="transition-all hover:text-neutral-800 flex align-middle relative uppercase"
+                                className="transition-all hover:text-blue-800"
                                 href="#projects"
                             >
                                 Projects
                             </a>
                             <a
-                                className="transition-all hover:text-neutral-800 flex align-middle relative uppercase"
+                                className="transition-all hover:text-blue-800"
                                 href="#blog"
                             >
                                 Blog
                             </a>
                             <a
-                                className="transition-all hover:text-neutral-800 flex align-middle relative uppercase"
+                                className="transition-all hover:text-blue-800"
                                 href="#contact"
                             >
                                 Contact
@@ -50,7 +59,7 @@ export default function Home() {
                 </nav>
             </header>
             <main className="w-full flex flex-col items-center">
-                <section className="flex-auto min-w-0 my-2 md:my-6 flex flex-col px-6 sm:px-4 max-w-screen-2xl w-full prose md:prose-lg lg:prose-xl">
+                <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4 prose">
                     <h1 className="text-4xl font-semibold tracking-tight mb-4">
                         Hi, I&apos;m George Wilde
                     </h1>
@@ -188,7 +197,7 @@ export default function Home() {
                     </ul>
                 </section>
                 <section className="bg-neutral-200 flex w-full p-4 md:p-10 flex-row flex-wrap justify-center">
-                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/steven-jones.jpg"
@@ -208,7 +217,7 @@ export default function Home() {
                         <div className="text-xs">VP Digital Consulting</div>
                         <div className="text-xs">Ensono</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/fiona-collis.jpg"
@@ -226,7 +235,7 @@ export default function Home() {
                         <div className="text-xs">Operations Director</div>
                         <div className="text-xs">Ensono Digital</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/andy-mcmillan.jpg"
@@ -245,7 +254,7 @@ export default function Home() {
                         <div className="text-xs">Digital Product Manager</div>
                         <div className="text-xs">E.ON</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/kully-chatha.jpg"
@@ -264,7 +273,7 @@ export default function Home() {
                         <div className="text-xs">Senior Solution Architect</div>
                         <div className="text-xs">E.ON</div>
                     </div>
-                    <div className="flex items-center flex-col max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                         <Image
                             className="rounded-full"
                             src="/images/testimonials/farooq-ali.jpg"
@@ -284,605 +293,581 @@ export default function Home() {
                         <div className="text-xs">Somo Global</div>
                     </div>
                 </section>
-                <section className="w-full">
-                    <div className="mx-6">
-                        <h2
-                            className="text-4xl font-semibold tracking-tight mb-4 mt-10"
-                            id="projects"
-                        >
-                            Projects
-                        </h2>
-                        <p>
-                            Here are some recent projects I have had the
-                            pleasure of helping deliver.
-                        </p>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-7 justify-center mt-4">
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/the-gym-group.png"
-                                    alt="The Gym Group"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        The Gym Group
-                                    </div>
-                                    <div>
-                                        Ecommerce, Payment &amp; Identity
-                                        Platform
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Replatformed the digital estate for
-                                        Europe&apos;s 5th largest gym operator.
-                                        Read the{' '}
-                                        <a
-                                            target="_blank"
-                                            className="underline"
-                                            href="https://www.ensono.com/results/client-stories/supporting-growth-improving-customer-experience-and-increasing-business-agility-for-the-gym-group/"
-                                        >
-                                            case study
-                                        </a>
-                                        .
-                                    </div>
+                <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
+                    <h2
+                        className="text-4xl font-semibold tracking-tight mb-4 mt-10"
+                        id="projects"
+                    >
+                        Projects
+                    </h2>
+                    <p className="mb-4">
+                        Here are some recent projects I have had the pleasure of
+                        helping deliver.
+                    </p>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-7 items-center mt-4">
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/the-gym-group.png"
+                                alt="The Gym Group"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    The Gym Group
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/pay-uk.png"
-                                    alt="Pay.uk"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Pay.UK
-                                    </div>
-                                    <div>
-                                        Inter-Banking Fraud Prevention Platform
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Directory and API management system
-                                        provided by the UK&apos;s leading retail
-                                        payments authority to help prevent fraud
-                                        in the banking system.
-                                    </div>
+                                <div>
+                                    Ecommerce, Payment &amp; Identity Platform
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/next.png"
-                                    alt="NEXT"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Next
-                                    </div>
-                                    <div>Ecommerce Platform</div>
-                                    <div className="text-sm mt-4">
-                                        Mainframe to microservices migration for
-                                        this multi-brand leading global
-                                        retailer.
-                                    </div>
+                                <div className="text-sm mt-4">
+                                    Replatformed the digital estate for
+                                    Europe&apos;s 5th largest gym operator. Read
+                                    the{' '}
+                                    <a
+                                        target="_blank"
+                                        className="underline"
+                                        href="https://www.ensono.com/results/client-stories/supporting-growth-improving-customer-experience-and-increasing-business-agility-for-the-gym-group/"
+                                    >
+                                        case study
+                                    </a>
+                                    .
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/purplebricks.png"
-                                    alt="Purplebricks"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Purplebricks
-                                    </div>
-                                    <div>
-                                        My Purplebricks Account Management
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Platform used by customers to manage
-                                        their property sales or lettings.
-                                        Including sales negotiations, property
-                                        management and arranging viewings.
-                                    </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/pay-uk.png"
+                                alt="Pay.uk"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Pay.UK
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/socket-energy.png"
-                                    alt="Socket Energy"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Socket Energy
-                                    </div>
-                                    <div>Brochure and Account Management</div>
-                                    <div className="text-sm mt-4">
-                                        Integrated platform for this disruptor
-                                        energy provider developed by E.ON,
-                                        including CRM, CMS and energy industry
-                                        integrations.
-                                    </div>
+                                <div>
+                                    Inter-Banking Fraud Prevention Platform
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/my-npower.jpg"
-                                    alt="My Npower"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        npower
-                                    </div>
-                                    <div>
-                                        Customer Account Management Platform
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Greenfield project to allow customers to
-                                        manage their energy accounts. Providing
-                                        meter readings, bills &amp; payments and
-                                        future energy forecasting.
-                                    </div>
+                                <div className="text-sm mt-4">
+                                    Directory and API management system provided
+                                    by the UK&apos;s leading retail payments
+                                    authority to help prevent fraud in the
+                                    banking system.
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/EON-see.png"
-                                    alt="E.ON See"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        E.ON See
-                                    </div>
-                                    <div>
-                                        Ecommerce Platform and Membership Area
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Account management system to help
-                                        residential customers gain insights
-                                        about their energy using real-time usage
-                                        data.
-                                    </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/next.png"
+                                alt="NEXT"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Next
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/MINI-offers.png"
-                                    alt="Mini Offers"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Mini Offers
-                                    </div>
-                                    <div>Marketing Platform</div>
-                                    <div className="text-sm mt-4">
-                                        New car offers platform for the iconic
-                                        MINI brand driven by custom stock
-                                        management and CMS systems.
-                                    </div>
+                                <div>Ecommerce Platform</div>
+                                <div className="text-sm mt-4">
+                                    Mainframe to microservices migration for
+                                    this multi-brand leading global retailer.
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/showroom.png"
-                                    alt="Showroom Suite"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Showroom Suite
-                                    </div>
-                                    <div>
-                                        Automotive Dealership Management Portal
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Innovative motor finance dealer portal
-                                        that delivers the tools to increase lead
-                                        generation and deal conversion rates.
-                                    </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/purplebricks.png"
+                                alt="Purplebricks"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Purplebricks
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/halo.png"
-                                    alt="Halo Case Management"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Halo Case Management
-                                    </div>
-                                    <div>Case Management and CRM Platform</div>
-                                    <div className="text-sm mt-4">
-                                        Specialised substance misuse system used
-                                        by some of the largest addiction
-                                        services across the UK.
-                                    </div>
+                                <div>My Purplebricks Account Management</div>
+                                <div className="text-sm mt-4">
+                                    Platform used by customers to manage their
+                                    property sales or lettings. Including sales
+                                    negotiations, property management and
+                                    arranging viewings.
                                 </div>
-                            </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                                <Image
-                                    className="rounded-t-md"
-                                    src="/images/projects/spark.png"
-                                    alt="Spark Compliance"
-                                    width={450}
-                                    height={450}
-                                />
-                                <div className="flex flex-col p-4 w-full">
-                                    <div className="text-lg font-semibold mb-2">
-                                        Spark Compliance
-                                    </div>
-                                    <div>
-                                        Incident tracking and Quality Control
-                                        System
-                                    </div>
-                                    <div className="text-sm mt-4">
-                                        Audit and quality improvement system for
-                                        UK charities and public bodies who have
-                                        responsibility to report to the CQC.
-                                    </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/socket-energy.png"
+                                alt="Socket Energy"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Socket Energy
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
+                                <div>Brochure and Account Management</div>
+                                <div className="text-sm mt-4">
+                                    Integrated platform for this disruptor
+                                    energy provider developed by E.ON, including
+                                    CRM, CMS and energy industry integrations.
+                                </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/my-npower.jpg"
+                                alt="My Npower"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    npower
+                                </div>
+                                <div>Customer Account Management Platform</div>
+                                <div className="text-sm mt-4">
+                                    Greenfield project to allow customers to
+                                    manage their energy accounts. Providing
+                                    meter readings, bills &amp; payments and
+                                    future energy forecasting.
+                                </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/EON-see.png"
+                                alt="E.ON See"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    E.ON See
+                                </div>
+                                <div>
+                                    Ecommerce Platform and Membership Area
+                                </div>
+                                <div className="text-sm mt-4">
+                                    Account management system to help
+                                    residential customers gain insights about
+                                    their energy using real-time usage data.
+                                </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/MINI-offers.png"
+                                alt="Mini Offers"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Mini Offers
+                                </div>
+                                <div>Marketing Platform</div>
+                                <div className="text-sm mt-4">
+                                    New car offers platform for the iconic MINI
+                                    brand driven by custom stock management and
+                                    CMS systems.
+                                </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/showroom.png"
+                                alt="Showroom Suite"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Showroom Suite
+                                </div>
+                                <div>
+                                    Automotive Dealership Management Portal
+                                </div>
+                                <div className="text-sm mt-4">
+                                    Innovative motor finance dealer portal that
+                                    delivers the tools to increase lead
+                                    generation and deal conversion rates.
+                                </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/halo.png"
+                                alt="Halo Case Management"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Halo Case Management
+                                </div>
+                                <div>Case Management and CRM Platform</div>
+                                <div className="text-sm mt-4">
+                                    Specialised substance misuse system used by
+                                    some of the largest addiction services
+                                    across the UK.
+                                </div>
+                            </div>
+                        </li>
+                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
+                            <Image
+                                className="rounded-t-md"
+                                src="/images/projects/spark.png"
+                                alt="Spark Compliance"
+                                width={450}
+                                height={450}
+                            />
+                            <div className="flex flex-col p-4 w-full">
+                                <div className="text-lg font-semibold mb-2">
+                                    Spark Compliance
+                                </div>
+                                <div>
+                                    Incident tracking and Quality Control System
+                                </div>
+                                <div className="text-sm mt-4">
+                                    Audit and quality improvement system for UK
+                                    charities and public bodies who have
+                                    responsibility to report to the CQC.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </section>
-                <section className="w-full">
-                    <div className="mx-6">
-                        <h2
-                            className="text-4xl font-semibold tracking-tight mb-6 mt-10"
-                            id="blog"
-                        >
-                            Blog
-                        </h2>
-                        <ul className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-7 justify-center mt-4">
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://www.ensono.com/insights-and-news/expert-opinions/transforming-your-digital-strategy-with-a-headless-cms/"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        Transforming Your Digital Strategy with
-                                        a Headless CMS
-                                    </div>
-                                    <p className="my-4">
-                                        One of the most transformative decisions
-                                        you can make when evolving your existing
-                                        systems is to consider a headless CMS
-                                        approach. This decision is not just
-                                        about adopting new technology; it’s
-                                        about future-proofing your organization,
-                                        enhancing flexibility, and ensuring
-                                        seamless multi-channel content
-                                        delivery...
-                                    </p>
-
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-orange-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/head.svg"
-                                        alt="Head"
-                                        width={250}
-                                        height={250}
-                                    />
+                <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
+                    <h2
+                        className="text-4xl font-semibold tracking-tight mb-6 mt-10"
+                        id="blog"
+                    >
+                        Blog
+                    </h2>
+                    <ul className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-7 justify-center mt-4">
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://www.ensono.com/insights-and-news/expert-opinions/transforming-your-digital-strategy-with-a-headless-cms/"
+                            >
+                                <div className="text-xl font-semibold">
+                                    Transforming Your Digital Strategy with a
+                                    Headless CMS
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        Leveraging Data Maturity to Personalize
-                                        Retail Shopping Experiences
-                                    </div>
-                                    <p className="my-4">
-                                        In today’s retail environment,
-                                        personalization is not just a luxury,
-                                        it’s an expectation. Customers seek
-                                        experiences that are not only seamless
-                                        but also uniquely tailored to their
-                                        preferences and behaviors. For retailers
-                                        with robust infrastructures, the next
-                                        frontier is leveraging AI and predictive
-                                        analytics to enhance personalization and
-                                        dynamically adjust operational
-                                        strategies in real time...
-                                    </p>
+                                <p className="my-4">
+                                    One of the most transformative decisions you
+                                    can make when evolving your existing systems
+                                    is to consider a headless CMS approach. This
+                                    decision is not just about adopting new
+                                    technology; it’s about future-proofing your
+                                    organization, enhancing flexibility, and
+                                    ensuring seamless multi-channel content
+                                    delivery...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-blue-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/cart.svg"
-                                        alt="Cart"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-orange-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/head.svg"
+                                    alt="Head"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/"
+                            >
+                                <div className="text-xl font-semibold">
+                                    Leveraging Data Maturity to Personalize
+                                    Retail Shopping Experiences
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/introducing-the-safe-assignment-operator-in-javascript-59a6c8fcd6ce"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        Introducing the Safe Assignment Operator
-                                        in JavaScript
-                                    </div>
-                                    <p className="my-4">
-                                        I love seeing improvements to the core
-                                        JavaScript language that positively
-                                        impact the developer experience, and
-                                        there’s no better place to look for
-                                        improvements than in handling errors.
-                                        The proposal of the Safe Assignment
-                                        Operator ?= should be a significant
-                                        upgrade that makes the life of
-                                        developers just that little bit
-                                        easier...
-                                    </p>
+                                <p className="my-4">
+                                    In today’s retail environment,
+                                    personalization is not just a luxury, it’s
+                                    an expectation. Customers seek experiences
+                                    that are not only seamless but also uniquely
+                                    tailored to their preferences and behaviors.
+                                    For retailers with robust infrastructures,
+                                    the next frontier is leveraging AI and
+                                    predictive analytics to enhance
+                                    personalization and dynamically adjust
+                                    operational strategies in real time...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-amber-500 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/safe.svg"
-                                        alt="Safe"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-blue-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/cart.svg"
+                                    alt="Cart"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/introducing-the-safe-assignment-operator-in-javascript-59a6c8fcd6ce"
+                            >
+                                <div className="text-xl font-semibold">
+                                    Introducing the Safe Assignment Operator in
+                                    JavaScript
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        A Guide To Writing Effective User
-                                        Stories
-                                    </div>
-                                    <p className="my-4">
-                                        In this guide, I’m going to show you how
-                                        to write great user stories that get
-                                        software teams working together to build
-                                        the things your customers want...
-                                    </p>
+                                <p className="my-4">
+                                    I love seeing improvements to the core
+                                    JavaScript language that positively impact
+                                    the developer experience, and there’s no
+                                    better place to look for improvements than
+                                    in handling errors. The proposal of the Safe
+                                    Assignment Operator ?= should be a
+                                    significant upgrade that makes the life of
+                                    developers just that little bit easier...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-green-600 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/stories.svg"
-                                        alt="Stories"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-amber-500 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/safe.svg"
+                                    alt="Safe"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0"
+                            >
+                                <div className="text-xl font-semibold">
+                                    A Guide To Writing Effective User Stories
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/the-10-books-every-software-developer-should-read-5b6bd08755cc"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        The 10 books every software developer
-                                        should read
-                                    </div>
-                                    <p className="my-4">
-                                        Do you want to excel at your craft?
-                                        These books contain the insights and
-                                        principles that guide many of the
-                                        leading software companies, developers
-                                        and development managers today. Whether
-                                        you are just starting on your
-                                        development career or have been coding
-                                        for years, these books will help become
-                                        a better programmer...
-                                    </p>
+                                <p className="my-4">
+                                    In this guide, I’m going to show you how to
+                                    write great user stories that get software
+                                    teams working together to build the things
+                                    your customers want...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-cyan-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/book.svg"
-                                        alt="Book"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-green-600 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/stories.svg"
+                                    alt="Stories"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/the-10-books-every-software-developer-should-read-5b6bd08755cc"
+                            >
+                                <div className="text-xl font-semibold">
+                                    The 10 books every software developer should
+                                    read
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/why-sizing-user-stories-will-save-you-time-6e32561cfd81"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        Why sizing user stories will save you
-                                        time
-                                    </div>
-                                    <p className="my-4">
-                                        If you are working in a Scrum team, it
-                                        is often necessary to know how much work
-                                        is required to deliver each story you’re
-                                        bringing into a sprint. You are likely
-                                        to be tracking your velocity; that is
-                                        how much work you are delivering in each
-                                        sprint, and understanding the size of
-                                        user stories can help your team estimate
-                                        how many stories they can deliver in a
-                                        sprint...
-                                    </p>
+                                <p className="my-4">
+                                    Do you want to excel at your craft? These
+                                    books contain the insights and principles
+                                    that guide many of the leading software
+                                    companies, developers and development
+                                    managers today. Whether you are just
+                                    starting on your development career or have
+                                    been coding for years, these books will help
+                                    become a better programmer...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-fuchsia-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/measure.svg"
-                                        alt="Measure"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-cyan-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/book.svg"
+                                    alt="Book"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/why-sizing-user-stories-will-save-you-time-6e32561cfd81"
+                            >
+                                <div className="text-xl font-semibold">
+                                    Why sizing user stories will save you time
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/top-7-podcasts-of-2016-for-business-minded-programmers-6620af1cba43"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        Top 7 podcasts for business minded
-                                        programmers
-                                    </div>
-                                    <p className="my-4">
-                                        As the year draws to a close I thought I
-                                        would share the top programming,
-                                        technology and business podcasts I’ve
-                                        discovered and enjoyed in 2016. While
-                                        some of these podcasts cover languages I
-                                        have a personal interest in, there is
-                                        some great content for anyone interested
-                                        in good programming practices or the
-                                        business of running a tech company...
-                                    </p>
+                                <p className="my-4">
+                                    If you are working in a Scrum team, it is
+                                    often necessary to know how much work is
+                                    required to deliver each story you’re
+                                    bringing into a sprint. You are likely to be
+                                    tracking your velocity; that is how much
+                                    work you are delivering in each sprint, and
+                                    understanding the size of user stories can
+                                    help your team estimate how many stories
+                                    they can deliver in a sprint...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-emerald-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/podcast.svg"
-                                        alt="Podcast"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-fuchsia-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/measure.svg"
+                                    alt="Measure"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/top-7-podcasts-of-2016-for-business-minded-programmers-6620af1cba43"
+                            >
+                                <div className="text-xl font-semibold">
+                                    Top 7 podcasts for business minded
+                                    programmers
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/how-to-setup-a-custom-domain-on-github-pages-c481028c4fa"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        How to setup a custom domain on GitHub
-                                        Pages
-                                    </div>
-                                    <p className="my-4">
-                                        So you’ve set up a GitHub Pages
-                                        repository, added some great content; a
-                                        page to tell the world who you are, what
-                                        your product or project is about or
-                                        started writing your first blog post and
-                                        now you want to make it a bit more
-                                        personal by using your own domain name.
-                                        Setting up a custom domain for GitHub
-                                        Pages is a simple process. Just follow
-                                        these steps...
-                                    </p>
+                                <p className="my-4">
+                                    As the year draws to a close I thought I
+                                    would share the top programming, technology
+                                    and business podcasts I’ve discovered and
+                                    enjoyed in 2016. While some of these
+                                    podcasts cover languages I have a personal
+                                    interest in, there is some great content for
+                                    anyone interested in good programming
+                                    practices or the business of running a tech
+                                    company...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-pink-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/dns.svg"
-                                        alt="DNS"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-emerald-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/podcast.svg"
+                                    alt="Podcast"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/how-to-setup-a-custom-domain-on-github-pages-c481028c4fa"
+                            >
+                                <div className="text-xl font-semibold">
+                                    How to setup a custom domain on GitHub Pages
                                 </div>
-                            </li>
-                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                                <a
-                                    className="m-6 w-full"
-                                    target="_blank"
-                                    href="https://medium.com/@george_wilde/how-to-start-your-new-project-with-scrum-4136c93d1a25"
-                                >
-                                    <div className="text-xl font-semibold">
-                                        How to start your new project with Scrum
-                                    </div>
-                                    <p className="my-4">
-                                        I have had the pleasure of being part of
-                                        newly formed Scrum Teams, brought
-                                        together to develop new software several
-                                        times during my career. The principles
-                                        and events offered in this guide are a
-                                        direct summary from the lessons learned
-                                        during these experiences and from the
-                                        many other experiences I have had
-                                        working with Scrum Teams...
-                                    </p>
+                                <p className="my-4">
+                                    So you’ve set up a GitHub Pages repository,
+                                    added some great content; a page to tell the
+                                    world who you are, what your product or
+                                    project is about or started writing your
+                                    first blog post and now you want to make it
+                                    a bit more personal by using your own domain
+                                    name. Setting up a custom domain for GitHub
+                                    Pages is a simple process. Just follow these
+                                    steps...
+                                </p>
 
-                                    <p className="text-blue-800">
-                                        Continue reading
-                                    </p>
-                                </a>
-                                <div className="min-w-[250px] bg-violet-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                    <Image
-                                        className="m-10"
-                                        src="/images/blog/flag.svg"
-                                        alt="Flag"
-                                        width={250}
-                                        height={250}
-                                    />
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-pink-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/dns.svg"
+                                    alt="DNS"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+                            <a
+                                className="m-6 w-full"
+                                target="_blank"
+                                href="https://medium.com/@george_wilde/how-to-start-your-new-project-with-scrum-4136c93d1a25"
+                            >
+                                <div className="text-xl font-semibold">
+                                    How to start your new project with Scrum
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
+                                <p className="my-4">
+                                    I have had the pleasure of being part of
+                                    newly formed Scrum Teams, brought together
+                                    to develop new software several times during
+                                    my career. The principles and events offered
+                                    in this guide are a direct summary from the
+                                    lessons learned during these experiences and
+                                    from the many other experiences I have had
+                                    working with Scrum Teams...
+                                </p>
+
+                                <p className="text-blue-800">
+                                    Continue reading
+                                </p>
+                            </a>
+                            <div className="min-w-[250px] bg-violet-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
+                                <Image
+                                    className="m-10"
+                                    src="/images/blog/flag.svg"
+                                    alt="Flag"
+                                    width={250}
+                                    height={250}
+                                />
+                            </div>
+                        </li>
+                    </ul>
                 </section>
                 <section className="w-full">
                     <div className="mx-6">
@@ -906,7 +891,10 @@ export default function Home() {
             </main>
             <footer className="w-full mt-6">
                 <div className="bg-gray-800 text-white py-6 px-6">
-                    <p>&copy; 2025 Wilde Creations. All rights reserved.</p>
+                    <p>
+                        &copy; {currentYear} Wilde Creations. All rights
+                        reserved.
+                    </p>
                 </div>
                 <div className="bg-gray-900 text-white py-6 px-6">
                     <p>
