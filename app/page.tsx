@@ -86,7 +86,7 @@ export default function Home() {
                                 delivering high-quality, impactful products.
                             </p>
                         </div>
-                        <div className="md hidden md:block">
+                        <div className="md hidden md:inline-block w-full">
                             <Image
                                 src="/images/profile.jpg"
                                 alt="George Wilde"
@@ -287,7 +287,7 @@ export default function Home() {
                 <section className="w-full">
                     <div className="mx-6">
                         <h2
-                            className="text-3xl font-semibold tracking-tight mb-4 mt-8"
+                            className="text-4xl font-semibold tracking-tight mb-4 mt-10"
                             id="projects"
                         >
                             Projects
@@ -296,8 +296,8 @@ export default function Home() {
                             Here are some recent projects I have had the
                             pleasure of helping deliver.
                         </p>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-7 justify-center">
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-7 justify-center mt-4">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/the-gym-group.png"
@@ -328,7 +328,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/pay-uk.png"
@@ -351,7 +351,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/next.png"
@@ -371,7 +371,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/purplebricks.png"
@@ -394,7 +394,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/socket-energy.png"
@@ -415,7 +415,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/my-npower.jpg"
@@ -438,7 +438,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/EON-see.png"
@@ -461,7 +461,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/MINI-offers.png"
@@ -481,7 +481,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/showroom.png"
@@ -503,7 +503,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/halo.png"
@@ -523,7 +523,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="flex items-center flex-col w-full max-w-[450px] my-4 border border-neutral-400 rounded-md">
+                            <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                                 <Image
                                     className="rounded-t-md"
                                     src="/images/projects/spark.png"
@@ -552,20 +552,47 @@ export default function Home() {
                 <section className="w-full">
                     <div className="mx-6">
                         <h2
-                            className="text-3xl font-semibold tracking-tight mb-4 mt-8"
+                            className="text-4xl font-semibold tracking-tight mb-4 mt-10"
                             id="blog"
                         >
                             Blog
                         </h2>
-                        <ul className="list-disc list-inside">
-                            <li>
+                        <ul className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-7 justify-center mt-4">
+                            <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md">
                                 <a
+                                    className="m-6"
                                     target="_blank"
                                     href="https://www.ensono.com/insights-and-news/expert-opinions/transforming-your-digital-strategy-with-a-headless-cms/"
                                 >
-                                    Transforming Your Digital Strategy with a
-                                    Headless CMS
+                                    <div className="text-xl font-semibold">
+                                        Transforming Your Digital Strategy with
+                                        a Headless CMS
+                                    </div>
+                                    <p className="my-4">
+                                        One of the most transformative decisions
+                                        you can make when evolving your existing
+                                        systems is to consider a headless CMS
+                                        approach. This decision is not just
+                                        about adopting new technology; it’s
+                                        about future-proofing your organization,
+                                        enhancing flexibility, and ensuring
+                                        seamless multi-channel content
+                                        delivery...
+                                    </p>
+
+                                    <p className="text-blue-800">
+                                        Continue reading
+                                    </p>
                                 </a>
+                                <div className="min-w-[250px] bg-orange-700 flex h-full items-center">
+                                    <Image
+                                        className="m-10"
+                                        src="/images/blog/head.svg"
+                                        alt="Book"
+                                        width={250}
+                                        height={250}
+                                    />
+                                </div>
                             </li>
                             <li>
                                 <a
@@ -641,7 +668,7 @@ export default function Home() {
                 <section className="w-full">
                     <div className="mx-6">
                         <h2
-                            className="text-3xl font-semibold tracking-tight mb-4 mt-8"
+                            className="text-4xl font-semibold tracking-tight mb-4 mt-10"
                             id="contact"
                         >
                             Contact
