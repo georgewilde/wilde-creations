@@ -604,7 +604,19 @@ export default function Home() {
                                         Leveraging Data Maturity to Personalize
                                         Retail Shopping Experiences
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        In today’s retail environment,
+                                        personalization is not just a luxury,
+                                        it’s an expectation. Customers seek
+                                        experiences that are not only seamless
+                                        but also uniquely tailored to their
+                                        preferences and behaviors. For retailers
+                                        with robust infrastructures, the next
+                                        frontier is leveraging AI and predictive
+                                        analytics to enhance personalization and
+                                        dynamically adjust operational
+                                        strategies in real time...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -630,7 +642,18 @@ export default function Home() {
                                         Introducing the Safe Assignment Operator
                                         in JavaScript
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        I love seeing improvements to the core
+                                        JavaScript language that positively
+                                        impact the developer experience, and
+                                        there’s no better place to look for
+                                        improvements than in handling errors.
+                                        The proposal of the Safe Assignment
+                                        Operator ?= should be a significant
+                                        upgrade that makes the life of
+                                        developers just that little bit
+                                        easier...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -656,7 +679,12 @@ export default function Home() {
                                         A Guide To Writing Effective User
                                         Stories
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        In this guide, I’m going to show you how
+                                        to write great user stories that get
+                                        software teams working together to build
+                                        the things your customers want...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -682,7 +710,17 @@ export default function Home() {
                                         The 10 books every software developer
                                         should read
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        Do you want to excel at your craft?
+                                        These books contain the insights and
+                                        principles that guide many of the
+                                        leading software companies, developers
+                                        and development managers today. Whether
+                                        you are just starting on your
+                                        development career or have been coding
+                                        for years, these books will help become
+                                        a better programmer...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -708,7 +746,18 @@ export default function Home() {
                                         Why sizing user stories will save you
                                         time
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        If you are working in a Scrum team, it
+                                        is often necessary to know how much work
+                                        is required to deliver each story you’re
+                                        bringing into a sprint. You are likely
+                                        to be tracking your velocity; that is
+                                        how much work you are delivering in each
+                                        sprint, and understanding the size of
+                                        user stories can help your team estimate
+                                        how many stories they can deliver in a
+                                        sprint...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -734,7 +783,17 @@ export default function Home() {
                                         Top 7 podcasts for business minded
                                         programmers
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        As the year draws to a close I thought I
+                                        would share the top programming,
+                                        technology and business podcasts I’ve
+                                        discovered and enjoyed in 2016. While
+                                        some of these podcasts cover languages I
+                                        have a personal interest in, there is
+                                        some great content for anyone interested
+                                        in good programming practices or the
+                                        business of running a tech company...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -760,7 +819,18 @@ export default function Home() {
                                         How to setup a custom domain on GitHub
                                         Pages
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        So you’ve set up a GitHub Pages
+                                        repository, added some great content; a
+                                        page to tell the world who you are, what
+                                        your product or project is about or
+                                        started writing your first blog post and
+                                        now you want to make it a bit more
+                                        personal by using your own domain name.
+                                        Setting up a custom domain for GitHub
+                                        Pages is a simple process. Just follow
+                                        these steps...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
@@ -785,7 +855,17 @@ export default function Home() {
                                     <div className="text-xl font-semibold">
                                         How to start your new project with Scrum
                                     </div>
-                                    <p className="my-4">TBC</p>
+                                    <p className="my-4">
+                                        I have had the pleasure of being part of
+                                        newly formed Scrum Teams, brought
+                                        together to develop new software several
+                                        times during my career. The principles
+                                        and events offered in this guide are a
+                                        direct summary from the lessons learned
+                                        during these experiences and from the
+                                        many other experiences I have had
+                                        working with Scrum Teams...
+                                    </p>
 
                                     <p className="text-blue-800">
                                         Continue reading
