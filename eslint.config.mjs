@@ -20,6 +20,9 @@ const eslintConfig = [
             'next/core-web-vitals',
             'plugin:@next/next/recommended',
         ],
+        env: {
+            browser: false,
+        },
         rules: {
             'react/react-in-jsx-scope': 'off',
             'react/prop-types': 'off',

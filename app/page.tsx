@@ -1,18 +1,96 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 export default function Home() {
     const currentYear = new Date().getFullYear();
-    // const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isContactMessageShown, setIsContactMessageShown] = useState(false);
+
+    const handleContactFormSubmit = (
+        event: React.FormEvent<HTMLFormElement>,
+    ) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.currentTarget);
+        const email = formData.get('email') as string;
+        const message = formData.get('message') as string;
+
+        // Send the form data to the form system.
+        fetch('https://formspree.io/f/mldgrqyj', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                message,
+            }),
+        })
+            .then(response => {
+                if (response.ok) {
+                    setIsContactMessageShown(true);
+                } else {
+                    alert('An error occurred. Please try again.');
+                }
+            })
+            .catch(() => {
+                alert('An error occurred. Please try again.');
+            });
+    };
+
+    const handleNavClick = () => {
+        setIsMobileMenuOpen(false);
+    };
+
+    const NavigationLinks = () => (
+        <div className="flex flex-col sm:flex-row gap-6 items-center uppercase">
+            <Link
+                className="transition-all hover:text-blue-800"
+                href="/"
+                onClick={handleNavClick}
+            >
+                Home
+            </Link>
+            <a
+                className="transition-all hover:text-blue-800"
+                href="#skills"
+                onClick={handleNavClick}
+            >
+                Skills
+            </a>
+            <a
+                className="transition-all hover:text-blue-800"
+                href="#projects"
+                onClick={handleNavClick}
+            >
+                Projects
+            </a>
+            <a
+                className="transition-all hover:text-blue-800"
+                href="#blog"
+                onClick={handleNavClick}
+            >
+                Blog
+            </a>
+            <a
+                className="transition-all hover:text-blue-800"
+                href="#contact"
+                onClick={handleNavClick}
+            >
+                Contact
+            </a>
+        </div>
+    );
 
     return (
         <>
             <header className="w-full">
                 <nav className="mb-12 lg:mb-16 py-5 mx-4 md:mx-12">
                     <div className="flex flex-row md:items-center justify-between">
-                        <a
+                        <Link
                             className="text-3xl font-semibold tracking-tight"
                             href="/"
                         >
@@ -22,38 +100,26 @@ export default function Home() {
                                 width={128}
                                 height={56}
                             />
-                        </a>
-                        <div className="flex-row gap-6 mt-6 md:mt-0 items-center uppercase hidden sm:flex">
-                            <a
-                                className="transition-all hover:text-blue-800"
-                                href="/"
+                        </Link>
+                        {isMobileMenuOpen ? (
+                            <div className="fixed w-full top-0 left-0 right-0 bottom-0 bg-white p-10">
+                                <NavigationLinks />
+                            </div>
+                        ) : (
+                            <button
+                                className="sm:hidden border border-neutral-500 rounded px-3 py-0"
+                                onClick={() => setIsMobileMenuOpen(true)}
                             >
-                                Home
-                            </a>
-                            <a
-                                className="transition-all hover:text-blue-800"
-                                href="#skills"
-                            >
-                                Skills
-                            </a>
-                            <a
-                                className="transition-all hover:text-blue-800"
-                                href="#projects"
-                            >
-                                Projects
-                            </a>
-                            <a
-                                className="transition-all hover:text-blue-800"
-                                href="#blog"
-                            >
-                                Blog
-                            </a>
-                            <a
-                                className="transition-all hover:text-blue-800"
-                                href="#contact"
-                            >
-                                Contact
-                            </a>
+                                <Image
+                                    src="/images/menu.svg"
+                                    alt="Menu"
+                                    width={32}
+                                    height={32}
+                                />
+                            </button>
+                        )}
+                        <div className="mt-6 md:mt-0 hidden sm:block">
+                            <NavigationLinks />
                         </div>
                     </div>
                 </nav>
@@ -881,11 +947,69 @@ export default function Home() {
                             If you would like to discuss an opportunity or
                             project, please get in touch.
                         </p>
-                        <p>
-                            <a href="mailto:george@wildecreations.co.uk">
-                                george@wildecreations.co.uk
-                            </a>
-                        </p>
+                        <div className="flex flex-col md:flex-row">
+                            <div className="flex-grow">
+                                {!isContactMessageShown && (
+                                    <form
+                                        onSubmit={handleContactFormSubmit}
+                                        className="mt-6"
+                                    >
+                                        <div className="mb-6 flex">
+                                            <label
+                                                htmlFor="email"
+                                                className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
+                                            >
+                                                Your email
+                                            </label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                placeholder="Email"
+                                                className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                                            />
+                                        </div>
+                                        <div className="mb-6 flex">
+                                            <label
+                                                htmlFor="message"
+                                                className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
+                                            >
+                                                Your message
+                                            </label>
+                                            <textarea
+                                                name="message"
+                                                id="message"
+                                                placeholder="Message"
+                                                className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                                            ></textarea>
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            className="ml-[150px] mb-6 bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                        >
+                                            Send
+                                        </button>
+                                    </form>
+                                )}
+                                {isContactMessageShown && (
+                                    <div className="mt-6 bg-green-900 p-6 text-center text-white border-green-950 border-2">
+                                        Your message has been sent and I will be
+                                        in touch soon. Thank you.
+                                    </div>
+                                )}
+                            </div>
+                            <div className="pt-6 md:pt-0 md:ml-10 md:pl-10 min-w-[300px] md:border-l-2 border-l-neutral-200">
+                                <p>George Wilde</p>
+                                <p>
+                                    <a
+                                        href="mailto:george@wildecreations.co.uk"
+                                        className="text-blue-800"
+                                    >
+                                        george@wildecreations.co.uk
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
