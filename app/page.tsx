@@ -686,7 +686,7 @@ export default function Home() {
                                     onSubmit={handleContactFormSubmit}
                                     className="mt-6"
                                 >
-                                    <div className="mb-6 flex">
+                                    <div className="mb-6 flex flex-col md:flex-row">
                                         <label
                                             htmlFor="email"
                                             className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
@@ -701,7 +701,7 @@ export default function Home() {
                                             className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
                                         />
                                     </div>
-                                    <div className="mb-6 flex">
+                                    <div className="mb-6 flex flex-col md:flex-row">
                                         <label
                                             htmlFor="message"
                                             className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
