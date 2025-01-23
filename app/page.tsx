@@ -370,7 +370,7 @@ export default function Home() {
                         Here are some recent projects I have had the pleasure of
                         helping deliver.
                     </p>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-7 items-center mt-4">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-7 justify-items-center items-stretch mt-4">
                         <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
                             <Image
                                 className="rounded-t-md"
@@ -935,80 +935,78 @@ export default function Home() {
                         </li>
                     </ul>
                 </section>
-                <section className="w-full">
-                    <div className="mx-6">
-                        <h2
-                            className="text-4xl font-semibold tracking-tight mb-4 mt-10"
-                            id="contact"
-                        >
-                            Contact
-                        </h2>
-                        <p>
-                            If you would like to discuss an opportunity or
-                            project, please get in touch.
-                        </p>
-                        <div className="flex flex-col md:flex-row">
-                            <div className="flex-grow">
-                                {!isContactMessageShown && (
-                                    <form
-                                        onSubmit={handleContactFormSubmit}
-                                        className="mt-6"
-                                    >
-                                        <div className="mb-6 flex">
-                                            <label
-                                                htmlFor="email"
-                                                className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
-                                            >
-                                                Your email
-                                            </label>
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                id="email"
-                                                placeholder="Email"
-                                                className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
-                                            />
-                                        </div>
-                                        <div className="mb-6 flex">
-                                            <label
-                                                htmlFor="message"
-                                                className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
-                                            >
-                                                Your message
-                                            </label>
-                                            <textarea
-                                                name="message"
-                                                id="message"
-                                                placeholder="Message"
-                                                className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
-                                            ></textarea>
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            className="ml-[150px] mb-6 bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
+                    <h2
+                        className="text-4xl font-semibold tracking-tight mb-4 mt-10"
+                        id="contact"
+                    >
+                        Contact
+                    </h2>
+                    <p>
+                        If you would like to discuss an opportunity or project,
+                        please get in touch.
+                    </p>
+                    <div className="flex flex-col md:flex-row">
+                        <div className="flex-grow">
+                            {!isContactMessageShown && (
+                                <form
+                                    onSubmit={handleContactFormSubmit}
+                                    className="mt-6"
+                                >
+                                    <div className="mb-6 flex">
+                                        <label
+                                            htmlFor="email"
+                                            className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
                                         >
-                                            Send
-                                        </button>
-                                    </form>
-                                )}
-                                {isContactMessageShown && (
-                                    <div className="mt-6 bg-green-900 p-6 text-center text-white border-green-950 border-2">
-                                        Your message has been sent and I will be
-                                        in touch soon. Thank you.
+                                            Your email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            placeholder="Email"
+                                            className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                                        />
                                     </div>
-                                )}
-                            </div>
-                            <div className="pt-6 md:pt-0 md:ml-10 md:pl-10 min-w-[300px] md:border-l-2 border-l-neutral-200">
-                                <p>George Wilde</p>
-                                <p>
-                                    <a
-                                        href="mailto:george@wildecreations.co.uk"
-                                        className="text-blue-800"
+                                    <div className="mb-6 flex">
+                                        <label
+                                            htmlFor="message"
+                                            className="min-w-[150px] text-gray-700 text-sm font-bold mb-2"
+                                        >
+                                            Your message
+                                        </label>
+                                        <textarea
+                                            name="message"
+                                            id="message"
+                                            placeholder="Message"
+                                            className="w-full min-w-[250px] shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline"
+                                        ></textarea>
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        className="ml-[150px] mb-6 bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                                     >
-                                        george@wildecreations.co.uk
-                                    </a>
-                                </p>
-                            </div>
+                                        Send
+                                    </button>
+                                </form>
+                            )}
+                            {isContactMessageShown && (
+                                <div className="mt-6 bg-green-900 p-6 text-center text-white border-green-950 border-2">
+                                    Your message has been sent and I will be in
+                                    touch soon. Thank you.
+                                </div>
+                            )}
+                        </div>
+                        <div className="pt-6 md:pt-0 md:ml-10 md:pl-10 min-w-[25%] md:border-l-2 border-l-neutral-200">
+                            <p>George Wilde</p>
+                            <p>
+                                <a
+                                    href="mailto:george@wildecreations.co.uk"
+                                    className="text-blue-800"
+                                >
+                                    george@wildecreations.co.uk
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </section>
