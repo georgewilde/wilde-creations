@@ -97,7 +97,6 @@ export default function Home() {
 
     const BlogPost = ({ title, description, link, icon, colour }: BlogPost) => (
         <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-            {/*bg-orange-700*/}
             <a className="m-6 w-full" target="_blank" href={link}>
                 <div className="text-xl font-semibold">{title}</div>
                 <p className="my-4">{description}</p>
@@ -108,6 +107,8 @@ export default function Home() {
                     `min-w-[100px] bg-` +
                     colour +
                     ` h-full items-center rounded-tr-md rounded-br-md hidden md:flex`
+                    // Prevent tailwindcss from tree-shaking these classes as they are dynamic.
+                    // + `bg-orange-700 bg-blue-800 bg-amber-500 bg-green-600 bg-cyan-700 bg-fuchsia-800 bg-emerald-800 bg-pink-800 bg-violet-800`
                 }
             >
                 <Image
