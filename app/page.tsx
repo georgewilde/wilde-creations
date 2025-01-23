@@ -4,6 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
+import { blogPosts } from '@/app/blogPosts.data';
+
+export interface BlogPost {
+    title: string;
+    description: string;
+    link: string;
+    icon: string;
+    colour: string;
+}
+
 export default function Home() {
     const currentYear = new Date().getFullYear();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -85,6 +95,31 @@ export default function Home() {
         </div>
     );
 
+    const BlogPost = ({ title, description, link, icon, colour }: BlogPost) => (
+        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+            <a className="m-6 w-full" target="_blank" href={link}>
+                <div className="text-xl font-semibold">{title}</div>
+                <p className="my-4">{description}</p>
+                <p className="text-blue-800">Continue reading</p>
+            </a>
+            <div
+                className={
+                    `min-w-[100px] bg-` +
+                    colour +
+                    ` h-full items-center rounded-tr-md rounded-br-md hidden md:flex`
+                }
+            >
+                <Image
+                    className="m-10"
+                    src={`/images/blog/` + icon + `.svg`}
+                    alt="Icon"
+                    width={100}
+                    height={100}
+                />
+            </div>
+        </li>
+    );
+
     return (
         <>
             <header className="w-full">
@@ -161,12 +196,12 @@ export default function Home() {
                                 delivering high-quality, impactful products.
                             </p>
                         </div>
-                        <div className="hidden md:block w-full min-w-[200px]">
+                        <div className="hidden md:block w-[200px] min-w-[200px]">
                             <Image
                                 src="/images/profile.jpg"
                                 alt="George Wilde"
-                                width={300}
-                                height={300}
+                                width={200}
+                                height={200}
                             />
                         </div>
                     </div>
@@ -368,7 +403,7 @@ export default function Home() {
                     </h2>
                     <p className="mb-4">
                         Here are some recent projects I have had the pleasure of
-                        helping deliver.
+                        being involved with.
                     </p>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-7 justify-items-center items-stretch mt-4">
                         <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
@@ -620,319 +655,17 @@ export default function Home() {
                     >
                         Blog
                     </h2>
-                    <ul className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-7 justify-center mt-4">
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://www.ensono.com/insights-and-news/expert-opinions/transforming-your-digital-strategy-with-a-headless-cms/"
-                            >
-                                <div className="text-xl font-semibold">
-                                    Transforming Your Digital Strategy with a
-                                    Headless CMS
-                                </div>
-                                <p className="my-4">
-                                    One of the most transformative decisions you
-                                    can make when evolving your existing systems
-                                    is to consider a headless CMS approach. This
-                                    decision is not just about adopting new
-                                    technology; it’s about future-proofing your
-                                    organization, enhancing flexibility, and
-                                    ensuring seamless multi-channel content
-                                    delivery...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-orange-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/head.svg"
-                                    alt="Head"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/"
-                            >
-                                <div className="text-xl font-semibold">
-                                    Leveraging Data Maturity to Personalize
-                                    Retail Shopping Experiences
-                                </div>
-                                <p className="my-4">
-                                    In today’s retail environment,
-                                    personalization is not just a luxury, it’s
-                                    an expectation. Customers seek experiences
-                                    that are not only seamless but also uniquely
-                                    tailored to their preferences and behaviors.
-                                    For retailers with robust infrastructures,
-                                    the next frontier is leveraging AI and
-                                    predictive analytics to enhance
-                                    personalization and dynamically adjust
-                                    operational strategies in real time...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-blue-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/cart.svg"
-                                    alt="Cart"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/introducing-the-safe-assignment-operator-in-javascript-59a6c8fcd6ce"
-                            >
-                                <div className="text-xl font-semibold">
-                                    Introducing the Safe Assignment Operator in
-                                    JavaScript
-                                </div>
-                                <p className="my-4">
-                                    I love seeing improvements to the core
-                                    JavaScript language that positively impact
-                                    the developer experience, and there’s no
-                                    better place to look for improvements than
-                                    in handling errors. The proposal of the Safe
-                                    Assignment Operator ?= should be a
-                                    significant upgrade that makes the life of
-                                    developers just that little bit easier...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-amber-500 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/safe.svg"
-                                    alt="Safe"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0"
-                            >
-                                <div className="text-xl font-semibold">
-                                    A Guide To Writing Effective User Stories
-                                </div>
-                                <p className="my-4">
-                                    In this guide, I’m going to show you how to
-                                    write great user stories that get software
-                                    teams working together to build the things
-                                    your customers want...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-green-600 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/stories.svg"
-                                    alt="Stories"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/the-10-books-every-software-developer-should-read-5b6bd08755cc"
-                            >
-                                <div className="text-xl font-semibold">
-                                    The 10 books every software developer should
-                                    read
-                                </div>
-                                <p className="my-4">
-                                    Do you want to excel at your craft? These
-                                    books contain the insights and principles
-                                    that guide many of the leading software
-                                    companies, developers and development
-                                    managers today. Whether you are just
-                                    starting on your development career or have
-                                    been coding for years, these books will help
-                                    become a better programmer...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-cyan-700 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/book.svg"
-                                    alt="Book"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/why-sizing-user-stories-will-save-you-time-6e32561cfd81"
-                            >
-                                <div className="text-xl font-semibold">
-                                    Why sizing user stories will save you time
-                                </div>
-                                <p className="my-4">
-                                    If you are working in a Scrum team, it is
-                                    often necessary to know how much work is
-                                    required to deliver each story you’re
-                                    bringing into a sprint. You are likely to be
-                                    tracking your velocity; that is how much
-                                    work you are delivering in each sprint, and
-                                    understanding the size of user stories can
-                                    help your team estimate how many stories
-                                    they can deliver in a sprint...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-fuchsia-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/measure.svg"
-                                    alt="Measure"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/top-7-podcasts-of-2016-for-business-minded-programmers-6620af1cba43"
-                            >
-                                <div className="text-xl font-semibold">
-                                    Top 7 podcasts for business minded
-                                    programmers
-                                </div>
-                                <p className="my-4">
-                                    As the year draws to a close I thought I
-                                    would share the top programming, technology
-                                    and business podcasts I’ve discovered and
-                                    enjoyed in 2016. While some of these
-                                    podcasts cover languages I have a personal
-                                    interest in, there is some great content for
-                                    anyone interested in good programming
-                                    practices or the business of running a tech
-                                    company...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-emerald-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/podcast.svg"
-                                    alt="Podcast"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/how-to-setup-a-custom-domain-on-github-pages-c481028c4fa"
-                            >
-                                <div className="text-xl font-semibold">
-                                    How to setup a custom domain on GitHub Pages
-                                </div>
-                                <p className="my-4">
-                                    So you’ve set up a GitHub Pages repository,
-                                    added some great content; a page to tell the
-                                    world who you are, what your product or
-                                    project is about or started writing your
-                                    first blog post and now you want to make it
-                                    a bit more personal by using your own domain
-                                    name. Setting up a custom domain for GitHub
-                                    Pages is a simple process. Just follow these
-                                    steps...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-pink-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/dns.svg"
-                                    alt="DNS"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
-                        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-                            <a
-                                className="m-6 w-full"
-                                target="_blank"
-                                href="https://medium.com/@george_wilde/how-to-start-your-new-project-with-scrum-4136c93d1a25"
-                            >
-                                <div className="text-xl font-semibold">
-                                    How to start your new project with Scrum
-                                </div>
-                                <p className="my-4">
-                                    I have had the pleasure of being part of
-                                    newly formed Scrum Teams, brought together
-                                    to develop new software several times during
-                                    my career. The principles and events offered
-                                    in this guide are a direct summary from the
-                                    lessons learned during these experiences and
-                                    from the many other experiences I have had
-                                    working with Scrum Teams...
-                                </p>
-
-                                <p className="text-blue-800">
-                                    Continue reading
-                                </p>
-                            </a>
-                            <div className="min-w-[250px] bg-violet-800 h-full items-center rounded-tr-md rounded-br-md hidden md:flex">
-                                <Image
-                                    className="m-10"
-                                    src="/images/blog/flag.svg"
-                                    alt="Flag"
-                                    width={250}
-                                    height={250}
-                                />
-                            </div>
-                        </li>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-7 justify-center mt-4">
+                        {blogPosts.map((post, index) => (
+                            <BlogPost
+                                key={index}
+                                title={post.title}
+                                description={post.description}
+                                link={post.link}
+                                icon={post.icon}
+                                colour={post.colour}
+                            />
+                        ))}
                     </ul>
                 </section>
                 <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
