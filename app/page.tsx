@@ -626,28 +626,29 @@ export default function Home() {
                                 </div>
                             </div>
                         </li>
-                        <li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">
-                            <Image
-                                className="rounded-t-md"
-                                src="/images/projects/spark.png"
-                                alt="Spark Compliance"
-                                width={450}
-                                height={450}
-                            />
-                            <div className="flex flex-col p-4 w-full">
-                                <div className="text-lg font-semibold mb-2">
-                                    Spark Compliance
-                                </div>
-                                <div>
-                                    Incident tracking and Quality Control System
-                                </div>
-                                <div className="text-sm mt-4">
-                                    Audit and quality improvement system for UK
-                                    charities and public bodies who have
-                                    responsibility to report to the CQC.
-                                </div>
-                            </div>
-                        </li>
+                        {/* Old Projects */}
+                        {/*<li className="flex items-center flex-col w-full max-w-[450px] border border-neutral-400 rounded-md">*/}
+                        {/*    <Image*/}
+                        {/*        className="rounded-t-md"*/}
+                        {/*        src="/images/projects/spark.png"*/}
+                        {/*        alt="Spark Compliance"*/}
+                        {/*        width={450}*/}
+                        {/*        height={450}*/}
+                        {/*    />*/}
+                        {/*    <div className="flex flex-col p-4 w-full">*/}
+                        {/*        <div className="text-lg font-semibold mb-2">*/}
+                        {/*            Spark Compliance*/}
+                        {/*        </div>*/}
+                        {/*        <div>*/}
+                        {/*            Incident tracking and Quality Control System*/}
+                        {/*        </div>*/}
+                        {/*        <div className="text-sm mt-4">*/}
+                        {/*            Audit and quality improvement system for UK*/}
+                        {/*            charities and public bodies who have*/}
+                        {/*            responsibility to report to the CQC.*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</li>*/}
                     </ul>
                 </section>
                 <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
