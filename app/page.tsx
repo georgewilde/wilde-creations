@@ -97,6 +97,7 @@ export default function Home() {
 
     const BlogPost = ({ title, description, link, icon, colour }: BlogPost) => (
         <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
+            {/*bg-orange-700*/}
             <a className="m-6 w-full" target="_blank" href={link}>
                 <div className="text-xl font-semibold">{title}</div>
                 <p className="my-4">{description}</p>
