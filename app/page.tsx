@@ -124,8 +124,8 @@ export default function Home() {
 
     return (
         <>
-            <header className="w-full">
-                <nav className="mb-12 lg:mb-16 py-5 mx-4 md:mx-12">
+            <header className="flex flex-col items-center w-full justify-between">
+                <nav className="w-full max-w-screen-2xl mb-12 lg:mb-16 py-5 px-4">
                     <div className="flex flex-row md:items-center justify-between">
                         <Link
                             className="text-3xl font-semibold tracking-tight"
@@ -167,7 +167,7 @@ export default function Home() {
                         Hi, I&apos;m George Wilde
                     </h1>
                     <div className="flex flex-row">
-                        <div className="md:mr-6 text-justify">
+                        <div className="md:mr-10 text-justify">
                             <p>
                                 I am an accomplished technology leader with a
                                 consistent track record of guiding
@@ -200,6 +200,7 @@ export default function Home() {
                         </div>
                         <div className="hidden md:block w-[200px] min-w-[200px]">
                             <Image
+                                className="rounded"
                                 src="/images/profile.jpg"
                                 alt="George Wilde"
                                 width={200}
@@ -299,101 +300,109 @@ export default function Home() {
                         </li>
                     </ul>
                 </section>
-                <section className="bg-neutral-200 flex w-full p-4 md:p-10 flex-row flex-wrap justify-center">
-                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
-                        <Image
-                            className="rounded-full"
-                            src="/images/testimonials/steven-jones.jpg"
-                            alt="Steven Jones"
-                            width={100}
-                            height={100}
-                        />
-                        <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
-                            <em>
-                                &quot;George is a strong technical leader. He
-                                has consistently helped ensure our teams deliver
-                                our client&apos;s visions and is a key part of
-                                our technical leadership.&quot;
-                            </em>
+                <section className="flex justify-center bg-neutral-200 w-full p-4 md:p-10">
+                    <div className="flex flex-row flex-wrap justify-center max-w-screen-2xl">
+                        <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                            <Image
+                                className="rounded-full"
+                                src="/images/testimonials/steven-jones.jpg"
+                                alt="Steven Jones"
+                                width={100}
+                                height={100}
+                            />
+                            <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
+                                <em>
+                                    &quot;George is a strong technical leader.
+                                    He has consistently helped ensure our teams
+                                    deliver our client&apos;s visions and is a
+                                    key part of our technical leadership.&quot;
+                                </em>
+                            </div>
+                            <div className="">Steven Jones</div>
+                            <div className="text-xs">VP Digital Consulting</div>
+                            <div className="text-xs">Ensono</div>
                         </div>
-                        <div className="">Steven Jones</div>
-                        <div className="text-xs">VP Digital Consulting</div>
-                        <div className="text-xs">Ensono</div>
-                    </div>
-                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
-                        <Image
-                            className="rounded-full"
-                            src="/images/testimonials/fiona-collis.jpg"
-                            alt="Fiona Collis"
-                            width={100}
-                            height={100}
-                        />
-                        <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
-                            <em>
-                                &quot;George has helped shape our strategy and
-                                been a consistent leader.&quot;
-                            </em>
+                        <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                            <Image
+                                className="rounded-full"
+                                src="/images/testimonials/fiona-collis.jpg"
+                                alt="Fiona Collis"
+                                width={100}
+                                height={100}
+                            />
+                            <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
+                                <em>
+                                    &quot;George has helped shape our strategy
+                                    and been a consistent leader.&quot;
+                                </em>
+                            </div>
+                            <div className="">Fiona Collis</div>
+                            <div className="text-xs">Operations Director</div>
+                            <div className="text-xs">Ensono Digital</div>
                         </div>
-                        <div className="">Fiona Collis</div>
-                        <div className="text-xs">Operations Director</div>
-                        <div className="text-xs">Ensono Digital</div>
-                    </div>
-                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
-                        <Image
-                            className="rounded-full"
-                            src="/images/testimonials/andy-mcmillan.jpg"
-                            alt="Andy McMillan"
-                            width={100}
-                            height={100}
-                        />
-                        <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
-                            <em>
-                                &quot;George is fantastic at managing a
-                                development team and implementing best practices
-                                to ensure code quality.&quot;
-                            </em>
+                        <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                            <Image
+                                className="rounded-full"
+                                src="/images/testimonials/andy-mcmillan.jpg"
+                                alt="Andy McMillan"
+                                width={100}
+                                height={100}
+                            />
+                            <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
+                                <em>
+                                    &quot;George is fantastic at managing a
+                                    development team and implementing best
+                                    practices to ensure code quality.&quot;
+                                </em>
+                            </div>
+                            <div className="">Andy McMillan</div>
+                            <div className="text-xs">
+                                Digital Product Manager
+                            </div>
+                            <div className="text-xs">E.ON</div>
                         </div>
-                        <div className="">Andy McMillan</div>
-                        <div className="text-xs">Digital Product Manager</div>
-                        <div className="text-xs">E.ON</div>
-                    </div>
-                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
-                        <Image
-                            className="rounded-full"
-                            src="/images/testimonials/kully-chatha.jpg"
-                            alt="Kully Chatha"
-                            width={100}
-                            height={100}
-                        />
-                        <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
-                            <em>
-                                &quot;George is a highly capable individual with
-                                excellent technical leadership and interpersonal
-                                skills.&quot;
-                            </em>
+                        <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                            <Image
+                                className="rounded-full"
+                                src="/images/testimonials/kully-chatha.jpg"
+                                alt="Kully Chatha"
+                                width={100}
+                                height={100}
+                            />
+                            <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
+                                <em>
+                                    &quot;George is a highly capable individual
+                                    with excellent technical leadership and
+                                    interpersonal skills.&quot;
+                                </em>
+                            </div>
+                            <div className="">Kully Chatha</div>
+                            <div className="text-xs">
+                                Senior Solution Architect
+                            </div>
+                            <div className="text-xs">E.ON</div>
                         </div>
-                        <div className="">Kully Chatha</div>
-                        <div className="text-xs">Senior Solution Architect</div>
-                        <div className="text-xs">E.ON</div>
-                    </div>
-                    <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
-                        <Image
-                            className="rounded-full"
-                            src="/images/testimonials/farooq-ali.jpg"
-                            alt="Farooq Ali"
-                            width={100}
-                            height={100}
-                        />
-                        <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
-                            <em>
-                                &quot;All round great guy. Professional,
-                                dedicated and highly regarded as a technical
-                                lead.&quot;
-                            </em>
+                        <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                            <Image
+                                className="rounded-full"
+                                src="/images/testimonials/farooq-ali.jpg"
+                                alt="Farooq Ali"
+                                width={100}
+                                height={100}
+                            />
+                            <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
+                                <em>
+                                    &quot;All round great guy. Professional,
+                                    dedicated and highly regarded as a technical
+                                    lead.&quot;
+                                </em>
+                            </div>
+                            <div className="">Farooq Ali</div>
+                            <div className="text-xs">
+                                Head of Business Agility
+                            </div>
+                            <div className="text-xs">Somo Global</div>
                         </div>
-                        <div className="">Farooq Ali</div>
-                        <div className="text-xs">Head of Business Agility</div>
-                        <div className="text-xs">Somo Global</div>
                     </div>
                 </section>
                 <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
