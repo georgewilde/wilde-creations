@@ -58,35 +58,35 @@ export default function Home() {
     const NavigationLinks = () => (
         <div className="flex flex-col sm:flex-row gap-6 items-center uppercase">
             <Link
-                className="transition-all hover:text-blue-800"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
                 href="/"
                 onClick={handleNavClick}
             >
                 Home
             </Link>
             <a
-                className="transition-all hover:text-blue-800"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
                 href="#skills"
                 onClick={handleNavClick}
             >
                 Skills
             </a>
             <a
-                className="transition-all hover:text-blue-800"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
                 href="#projects"
                 onClick={handleNavClick}
             >
                 Projects
             </a>
             <a
-                className="transition-all hover:text-blue-800"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
                 href="#blog"
                 onClick={handleNavClick}
             >
                 Blog
             </a>
             <a
-                className="transition-all hover:text-blue-800"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
                 href="#contact"
                 onClick={handleNavClick}
             >
@@ -96,12 +96,16 @@ export default function Home() {
     );
 
     const BlogPost = ({ title, description, link, icon, colour }: BlogPost) => (
-        <li className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between">
-            <a className="m-6 w-full" target="_blank" href={link}>
+        <a
+            className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between hover:bg-neutral-100"
+            target="_blank"
+            href={link}
+        >
+            <div className="m-6 w-full">
                 <div className="text-xl font-semibold">{title}</div>
                 <p className="my-4">{description}</p>
                 <p className="text-blue-800">Continue reading</p>
-            </a>
+            </div>
             <div
                 className={
                     `min-w-[100px] bg-` +
@@ -112,14 +116,14 @@ export default function Home() {
                 }
             >
                 <Image
-                    className="m-10"
+                    className="m-5 lg:m-8"
                     src={`/images/blog/` + icon + `.svg`}
                     alt="Icon"
                     width={100}
                     height={100}
                 />
             </div>
-        </li>
+        </a>
     );
 
     return (
@@ -139,7 +143,22 @@ export default function Home() {
                             />
                         </Link>
                         {isMobileMenuOpen ? (
-                            <div className="fixed w-full top-0 left-0 right-0 bottom-0 bg-white p-10">
+                            <div className="fixed w-full top-0 left-0 right-0 bottom-0 bg-white px-4 py-7">
+                                <div className="text-right mb-6">
+                                    <button
+                                        className="sm:hidden border border-neutral-500 rounded p-3"
+                                        onClick={() =>
+                                            setIsMobileMenuOpen(false)
+                                        }
+                                    >
+                                        <Image
+                                            src="/images/close.svg"
+                                            alt="Close"
+                                            width={32}
+                                            height={32}
+                                        />
+                                    </button>
+                                </div>
                                 <NavigationLinks />
                             </div>
                         ) : (
@@ -667,7 +686,7 @@ export default function Home() {
                     >
                         Blog
                     </h2>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-7 justify-center mt-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-7 justify-center mt-4">
                         {blogPosts.map((post, index) => (
                             <BlogPost
                                 key={index}
@@ -678,7 +697,7 @@ export default function Home() {
                                 colour={post.colour}
                             />
                         ))}
-                    </ul>
+                    </div>
                 </section>
                 <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4">
                     <h2
