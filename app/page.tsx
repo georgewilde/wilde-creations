@@ -188,14 +188,14 @@ export default function Home() {
                     <div className="flex flex-row">
                         <div className="md:mr-10 text-justify">
                             <p>
-                                I am an accomplished technology leader with a
+                                I am an experienced technology leader with a
                                 consistent track record of guiding
                                 high-performing engineering teams to deliver
                                 robust, scalable distributed systems. Drawing on
                                 over 20 years’ experience, I have served as a
-                                technology leader for several organisations,
-                                where I’ve shaped technical roadmaps, introduced
-                                best practices, and established clear,
+                                technology leader for many organisations, where
+                                I’ve shaped technical roadmaps, introduced best
+                                practices, and established clear,
                                 outcome-focused processes. My expertise lies in
                                 architecting service-oriented web applications,
                                 driving performance-critical solutions that
