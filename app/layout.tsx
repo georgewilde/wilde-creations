@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Raleway, Lora } from 'next/font/google';
 import './globals.css';
+import { ReactNode } from 'react';
 
 const ralewaySans = Raleway({
     variable: '--font-raleway-sans',
@@ -15,13 +16,13 @@ const loraSerif = Lora({
 export const metadata: Metadata = {
     title: 'George Wilde - Technology Leader',
     description:
-        'George Wilde is a technology leader with a passion for building and scaling high-performing teams.',
+        'George Wilde is an innovative technology leader specialising in strategic growth and transformative engineering solutions.',
 };
 
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: ReactNode;
 }>) {
     return (
         <html lang="en">

@@ -1,6 +1,6 @@
-import { BlogPost } from '@/app/page';
+import { BlogPostType } from './blogPost.types';
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPostType[] = [
     {
         title: 'Transforming Your Digital Strategy with a Headless CMS',
         description:

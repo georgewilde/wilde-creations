@@ -4,15 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import { blogPosts } from '@/app/blogPosts.data';
-
-export interface BlogPost {
-    title: string;
-    description: string;
-    link: string;
-    icon: string;
-    colour: string;
-}
+import { BlogPost, blogPosts } from '@/app/BlogPost';
 
 export default function Home() {
     const currentYear = new Date().getFullYear();
@@ -56,74 +48,50 @@ export default function Home() {
     };
 
     const NavigationLinks = () => (
-        <div className="flex flex-col sm:flex-row gap-6 items-center uppercase">
+        <div className="flex flex-col md:flex-row gap-6 items-center uppercase">
             <Link
-                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
                 href="/"
                 onClick={handleNavClick}
             >
                 Home
             </Link>
             <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
                 href="#skills"
                 onClick={handleNavClick}
             >
                 Skills
             </a>
             <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
+                href="#testimonials"
+                onClick={handleNavClick}
+            >
+                Testimonials
+            </a>
+            <a
+                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
                 href="#projects"
                 onClick={handleNavClick}
             >
                 Projects
             </a>
             <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
                 href="#blog"
                 onClick={handleNavClick}
             >
                 Blog
             </a>
             <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 sm:p-0 hover:bg-neutral-100 sm:hover:bg-transparent"
+                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
                 href="#contact"
                 onClick={handleNavClick}
             >
                 Contact
             </a>
         </div>
-    );
-
-    const BlogPost = ({ title, description, link, icon, colour }: BlogPost) => (
-        <a
-            className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between hover:bg-neutral-100"
-            target="_blank"
-            href={link}
-        >
-            <div className="m-6 w-full">
-                <div className="text-xl font-semibold">{title}</div>
-                <p className="my-4">{description}</p>
-                <p className="text-blue-800">Continue reading</p>
-            </div>
-            <div
-                className={
-                    `min-w-[100px] bg-` +
-                    colour +
-                    ` h-full items-center rounded-tr-md rounded-br-md hidden md:flex`
-                    // Prevent tailwindcss from tree-shaking these classes as they are dynamic.
-                    // + `bg-orange-700 bg-blue-800 bg-amber-500 bg-green-600 bg-cyan-700 bg-fuchsia-800 bg-emerald-800 bg-pink-800 bg-violet-800`
-                }
-            >
-                <Image
-                    className="m-5 lg:m-8"
-                    src={`/images/blog/` + icon + `.svg`}
-                    alt="Icon"
-                    width={100}
-                    height={100}
-                />
-            </div>
-        </a>
     );
 
     return (
@@ -146,7 +114,7 @@ export default function Home() {
                             <div className="fixed w-full top-0 left-0 right-0 bottom-0 bg-white px-4 py-7">
                                 <div className="text-right mb-6">
                                     <button
-                                        className="sm:hidden border border-neutral-500 rounded p-3"
+                                        className="md:hidden border border-neutral-500 rounded p-3"
                                         onClick={() =>
                                             setIsMobileMenuOpen(false)
                                         }
@@ -163,7 +131,7 @@ export default function Home() {
                             </div>
                         ) : (
                             <button
-                                className="sm:hidden border border-neutral-500 rounded px-3 py-0"
+                                className="md:hidden border border-neutral-500 rounded px-3 py-0"
                                 onClick={() => setIsMobileMenuOpen(true)}
                             >
                                 <Image
@@ -174,7 +142,7 @@ export default function Home() {
                                 />
                             </button>
                         )}
-                        <div className="mt-6 md:mt-0 hidden sm:block">
+                        <div className="mt-6 md:mt-0 hidden md:block">
                             <NavigationLinks />
                         </div>
                     </div>
@@ -188,31 +156,33 @@ export default function Home() {
                     <div className="flex flex-row">
                         <div className="md:mr-10 text-justify">
                             <p>
-                                I am an experienced technology leader with a
+                                I am an innovative technology leader
+                                specialising in strategic growth and
+                                transformative engineering solutions. With a
                                 consistent track record of guiding
                                 high-performing engineering teams to deliver
-                                robust, scalable distributed systems. Drawing on
-                                over 20 years’ experience, I have served as a
-                                technology leader for many organisations, where
-                                I’ve shaped technical roadmaps, introduced best
+                                robust, scalable distributed systems, I draw on
+                                over 20 years’ experience as a technology leader
+                                across multiple organisations. In these roles, I
+                                have shaped technical roadmaps, introduced best
                                 practices, and established clear,
                                 outcome-focused processes. My expertise lies in
                                 architecting service-oriented web applications,
-                                driving performance-critical solutions that
+                                driving performance-critical solutions to
                                 support business growth, and instilling a
                                 culture of excellence and innovation.
                             </p>
                             <p>
                                 My leadership approach combines deep technical
-                                expertise with a passion for mentoring and
-                                empowering teams. I actively cultivate a culture
+                                knowledge with a passion for mentoring and
+                                empowering teams. I actively promote a culture
                                 of excellence by embedding modern engineering
                                 principles, tools, and agile methodologies. As a
-                                collaborative leader, I build strong
+                                collaborative leader, I foster strong
                                 relationships with stakeholders, working closely
                                 with cross-functional groups to bridge strategy
-                                and delivery. Above all, I thrive on creating an
-                                environment where individuals are empowered to
+                                and delivery. Above all, I thrive on creating
+                                environments where individuals are encouraged to
                                 learn, collaborate, and take ownership of
                                 delivering high-quality, impactful products.
                             </p>
@@ -319,7 +289,10 @@ export default function Home() {
                         </li>
                     </ul>
                 </section>
-                <section className="flex justify-center bg-neutral-200 w-full p-4 md:p-10">
+                <section
+                    className="flex justify-center bg-neutral-200 w-full p-4 md:p-10"
+                    id="testimonials"
+                >
                     <div className="flex flex-row flex-wrap justify-center max-w-screen-2xl">
                         <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                             <Image
