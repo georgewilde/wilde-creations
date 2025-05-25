@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import { BlogPostType } from './blogPost.types';
+import Link from 'next/link';
 
 export const BlogPost = ({
     title,
@@ -9,14 +10,17 @@ export const BlogPost = ({
     link,
     icon,
     colour,
+    externalLink,
 }: BlogPostType) => (
-    <a
+    <Link
         className="flex items-start flex-row w-full border border-neutral-400 rounded-md justify-between hover:bg-neutral-100"
-        target="_blank"
+        target={externalLink ? '_blank' : '_self'}
         href={link}
     >
         <div className="m-6 w-full">
-            <div className="text-xl font-semibold">{title}</div>
+            <div className="text-xl font-semibold">
+                {title} {externalLink}
+            </div>
             <p className="my-4">{description}</p>
             <p className="text-blue-800">Continue reading</p>
         </div>
@@ -37,5 +41,5 @@ export const BlogPost = ({
                 height={100}
             />
         </div>
-    </a>
+    </Link>
 );

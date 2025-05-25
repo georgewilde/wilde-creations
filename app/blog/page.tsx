@@ -22,6 +22,7 @@ export default function BlogPage() {
                                 link={post.link}
                                 icon={post.icon}
                                 colour={post.colour}
+                                externalLink={post.externalLink}
                             />
                         ))}
                     </div>

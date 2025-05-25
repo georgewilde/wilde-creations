@@ -8,6 +8,7 @@ export const blogPosts: BlogPostType[] = [
         link: '/blog/implementing-genai-solutions-in-legacy-systems',
         icon: 'chat',
         colour: 'fuchsia-800',
+        externalLink: false,
     },
     {
         title: 'Transforming Your Digital Strategy with a Headless CMS',
@@ -16,6 +17,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://www.ensono.com/insights-and-news/expert-opinions/transforming-your-digital-strategy-with-a-headless-cms/',
         icon: 'head',
         colour: 'orange-700',
+        externalLink: true,
     },
     {
         title: 'Leveraging Data Maturity to Personalize Retail Shopping Experiences',
@@ -24,6 +26,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/',
         icon: 'cart',
         colour: 'blue-800',
+        externalLink: true,
     },
     {
         title: 'Introducing the Safe Assignment Operator in JavaScript',
@@ -32,6 +35,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/introducing-the-safe-assignment-operator-in-javascript-59a6c8fcd6ce',
         icon: 'safe',
         colour: 'amber-500',
+        externalLink: true,
     },
     {
         title: 'A Guide To Writing Effective User Stories',
@@ -40,6 +44,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0',
         icon: 'stories',
         colour: 'green-600',
+        externalLink: true,
     },
     {
         title: 'The 10 books every software developer should read',
@@ -48,6 +53,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/the-10-books-every-software-developer-should-read-5b6bd08755cc',
         icon: 'book',
         colour: 'cyan-700',
+        externalLink: true,
     },
     {
         title: 'Why sizing user stories will save you time',
@@ -56,6 +62,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/why-sizing-user-stories-will-save-you-time-6e32561cfd81',
         icon: 'measure',
         colour: 'fuchsia-800',
+        externalLink: true,
     },
     {
         title: 'Top 7 podcasts for business minded programmers',
@@ -64,6 +71,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/top-7-podcasts-of-2016-for-business-minded-programmers-6620af1cba43',
         icon: 'podcast',
         colour: 'emerald-800',
+        externalLink: true,
     },
     {
         title: 'How to setup a custom domain on GitHub Pages',
@@ -72,6 +80,7 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/how-to-setup-a-custom-domain-on-github-pages-c481028c4fa',
         icon: 'dns',
         colour: 'pink-800',
+        externalLink: true,
     },
     {
         title: 'How to start your new project with Scrum',
@@ -80,5 +89,6 @@ export const blogPosts: BlogPostType[] = [
         link: 'https://medium.com/@george_wilde/how-to-start-your-new-project-with-scrum-4136c93d1a25',
         icon: 'flag',
         colour: 'violet-800',
+        externalLink: true,
     },
 ];
