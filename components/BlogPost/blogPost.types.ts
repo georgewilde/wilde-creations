@@ -4,4 +4,5 @@ export interface BlogPostType {
     link: string;
     icon: string;
     colour: string;
+    externalLink: boolean;
 }

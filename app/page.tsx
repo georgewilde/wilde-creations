@@ -547,6 +547,7 @@ export default function Home() {
                                 link={post.link}
                                 icon={post.icon}
                                 colour={post.colour}
+                                externalLink={post.externalLink}
                             />
                         ))}
                     </div>
