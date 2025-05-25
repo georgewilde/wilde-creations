@@ -21,41 +21,41 @@ export const Header = () => {
             >
                 Home
             </Link>
-            <a
+            <Link
                 className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#skills"
+                href="/#skills"
                 onClick={handleNavClick}
             >
                 Skills
-            </a>
-            <a
+            </Link>
+            <Link
                 className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#testimonials"
+                href="/#testimonials"
                 onClick={handleNavClick}
             >
                 Testimonials
-            </a>
-            <a
+            </Link>
+            <Link
                 className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#projects"
+                href="/#projects"
                 onClick={handleNavClick}
             >
                 Projects
-            </a>
-            <a
+            </Link>
+            <Link
                 className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#blog"
+                href="/#blog"
                 onClick={handleNavClick}
             >
                 Blog
-            </a>
-            <a
+            </Link>
+            <Link
                 className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#contact"
+                href="/#contact"
                 onClick={handleNavClick}
             >
                 Contact
-            </a>
+            </Link>
         </div>
     );
 
