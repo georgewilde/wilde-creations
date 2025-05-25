@@ -1,14 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react';
 
-import { BlogPost, blogPosts } from '@/app/BlogPost';
+import { BlogPost, blogPosts } from '@/components/BlogPost';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
 
 export default function Home() {
-    const currentYear = new Date().getFullYear();
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isContactMessageShown, setIsContactMessageShown] = useState(false);
 
     const handleContactFormSubmit = (
@@ -43,134 +42,25 @@ export default function Home() {
             });
     };
 
-    const handleNavClick = () => {
-        setIsMobileMenuOpen(false);
-    };
-
-    const NavigationLinks = () => (
-        <div className="flex flex-col md:flex-row gap-6 items-center uppercase">
-            <Link
-                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="/"
-                onClick={handleNavClick}
-            >
-                Home
-            </Link>
-            <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#skills"
-                onClick={handleNavClick}
-            >
-                Skills
-            </a>
-            <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#testimonials"
-                onClick={handleNavClick}
-            >
-                Testimonials
-            </a>
-            <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#projects"
-                onClick={handleNavClick}
-            >
-                Projects
-            </a>
-            <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#blog"
-                onClick={handleNavClick}
-            >
-                Blog
-            </a>
-            <a
-                className="transition-all hover:text-blue-800 w-full text-center p-6 md:p-0 hover:bg-neutral-100 md:hover:bg-transparent"
-                href="#contact"
-                onClick={handleNavClick}
-            >
-                Contact
-            </a>
-        </div>
-    );
-
     return (
         <>
-            <header className="flex flex-col items-center w-full justify-between">
-                <nav className="w-full max-w-screen-2xl mb-12 lg:mb-16 py-5 px-4">
-                    <div className="flex flex-row md:items-center justify-between">
-                        <Link
-                            className="text-3xl font-semibold tracking-tight"
-                            href="/"
-                        >
-                            <Image
-                                src="/images/logo.png"
-                                alt="Wilde Creations"
-                                width={128}
-                                height={56}
-                            />
-                        </Link>
-                        {isMobileMenuOpen ? (
-                            <div className="fixed w-full top-0 left-0 right-0 bottom-0 bg-white px-4 py-7">
-                                <div className="text-right mb-6">
-                                    <button
-                                        className="md:hidden border border-neutral-500 rounded p-3"
-                                        onClick={() =>
-                                            setIsMobileMenuOpen(false)
-                                        }
-                                    >
-                                        <Image
-                                            src="/images/close.svg"
-                                            alt="Close"
-                                            width={32}
-                                            height={32}
-                                        />
-                                    </button>
-                                </div>
-                                <NavigationLinks />
-                            </div>
-                        ) : (
-                            <button
-                                className="md:hidden border border-neutral-500 rounded px-3 py-0"
-                                onClick={() => setIsMobileMenuOpen(true)}
-                            >
-                                <Image
-                                    src="/images/menu.svg"
-                                    alt="Menu"
-                                    width={32}
-                                    height={32}
-                                />
-                            </button>
-                        )}
-                        <div className="mt-6 md:mt-0 hidden md:block">
-                            <NavigationLinks />
-                        </div>
-                    </div>
-                </nav>
-            </header>
+            <Header />
             <main className="w-full flex flex-col items-center">
                 <section className="flex flex-col flex-auto min-w-0 w-full max-w-screen-2xl my-2 md:my-6 px-6 sm:px-4 prose">
                     <h1 className="text-4xl font-semibold tracking-tight mb-4">
-                        Hi, I&apos;m George Wilde
+                        George Wilde – Engineering Leadership &amp; Technical
+                        Strategy
                     </h1>
                     <div className="flex flex-row">
                         <div className="md:mr-10 text-justify">
                             <p>
-                                I am an innovative technology leader
-                                specialising in strategic growth and
-                                transformative engineering solutions. With a
-                                consistent track record of guiding
+                                With over 20 years of experience, I lead
                                 high-performing engineering teams to deliver
-                                robust, scalable distributed systems, I draw on
-                                over 20 years’ experience as a technology leader
-                                across multiple organisations. In these roles, I
-                                have shaped technical roadmaps, introduced best
-                                practices, and established clear,
-                                outcome-focused processes. My expertise lies in
-                                architecting service-oriented web applications,
-                                driving performance-critical solutions to
-                                support business growth, and instilling a
-                                culture of excellence and innovation.
+                                scalable, robust systems across fintech, energy,
+                                and consultancy sectors. My passion lies in
+                                aligning technology initiatives with business
+                                objectives, fostering innovation, and mentoring
+                                engineering talent.
                             </p>
                             <p>
                                 My leadership approach combines deep technical
@@ -206,53 +96,38 @@ export default function Home() {
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-7 list-none not-prose">
                         <li className="border border-neutral-700 rounded-md p-6">
                             <h3 className="text-xl font-semibold">
-                                Technical Leadership & Team Building
+                                Leadership & Strategy
                             </h3>
                             <div>
-                                Experienced in guiding diverse engineering
-                                teams, fostering collaboration, and promoting a
-                                culture of continuous learning
+                                Experienced in Technical Leadership, Stakeholder
+                                Management, and Agile Methodologies.
                             </div>
                         </li>
                         <li className="border border-neutral-700 rounded-md p-6">
                             <h3 className="text-xl font-semibold">
-                                Software Architecture & Systems Design
+                                Architecture & Development
                             </h3>
                             <div>
-                                Skilled at designing scalable, secure, and
-                                high-performing distributed systems to meet
-                                complex business requirements
+                                Skilled in Software Architecture, Cloud
+                                Infrastructure (AWS, Azure), and Microservices.
                             </div>
                         </li>
                         <li className="border border-neutral-700 rounded-md p-6">
                             <h3 className="text-xl font-semibold">
-                                Agile Methodologies & DevOps
+                                Tools & Technologies
                             </h3>
                             <div>
-                                Adept at implementing Agile and DevOps
-                                practices, accelerating delivery times, and
-                                driving a culture of rapid iteration and
-                                feedback
+                                Skilled in JavaScript, TypeScript, React,
+                                Angular, Node.js, Python, GraphQL, C#, Next.js,
+                                .NET Core, Docker, Kubernetes, AWS, Azure, Jest,
+                                Playwright, SQL and PostgreSQL.
                             </div>
                         </li>
                         <li className="border border-neutral-700 rounded-md p-6">
-                            <h3 className="text-xl font-semibold">
-                                Stakeholder Management & Strategic Alignment
-                            </h3>
+                            <h3 className="text-xl font-semibold">Practices</h3>
                             <div>
-                                Effective in translating organisational goals
-                                into actionable technical roadmaps, ensuring
-                                clear communication and shared vision
-                            </div>
-                        </li>
-                        <li className="border border-neutral-700 rounded-md p-6">
-                            <h3 className="text-xl font-semibold">
-                                Cloud Infrastructure & Services
-                            </h3>
-                            <div>
-                                Proficient in leveraging AWS, Azure, or similar
-                                platforms, optimising deployment workflows, and
-                                managing cost-effective cloud solutions
+                                Experienced in CI/CD, TDD, Clean Code, and SOLID
+                                Principles
                             </div>
                         </li>
                         <li className="border border-neutral-700 rounded-md p-6">
@@ -260,31 +135,15 @@ export default function Home() {
                                 Mentoring & Coaching
                             </h3>
                             <div>
-                                Committed to developing future leaders through
-                                active guidance, professional development plans,
-                                and hands-on support
+                                Developing engineering talent through targeted
+                                mentorship and coaching.
                             </div>
                         </li>
                         <li className="border border-neutral-700 rounded-md p-6">
-                            <h3 className="text-xl font-semibold">
-                                Performance Optimisation & Reliability
-                            </h3>
+                            <h3 className="text-xl font-semibold">Data & AI</h3>
                             <div>
-                                Focused on enhancing system stability and
-                                availability, reducing downtime, and ensuring
-                                seamless end-user experiences
-                            </div>
-                        </li>
-                        <li className="border border-neutral-700 rounded-md p-6">
-                            <h3 className="text-xl font-semibold">
-                                AI & Data Integration
-                            </h3>
-                            <div>
-                                Skilled at embedding advanced analytics and
-                                machine learning initiatives into engineering
-                                teams, aligning data-driven innovations with
-                                core business objectives, and fostering a
-                                culture that maximises the tangible value of AI.
+                                Leveraging data-driven insights, GenAI, and
+                                machine learning to drive innovation.
                             </div>
                         </li>
                     </ul>
@@ -313,6 +172,27 @@ export default function Home() {
                             <div className="">Steven Jones</div>
                             <div className="text-xs">VP Digital Consulting</div>
                             <div className="text-xs">Ensono</div>
+                        </div>
+                        <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
+                            <Image
+                                className="rounded-full"
+                                src="/images/testimonials/colm-campbell.jpg"
+                                alt="Paul Brown"
+                                width={100}
+                                height={100}
+                            />
+                            <div className="border border-neutral-300 bg-white m-2 p-2 text-center">
+                                <em>
+                                    &quot;George's technology leadership was
+                                    essential to the success of our largest
+                                    digital transformation. He motivates teams,
+                                    ensures robust architecture, and delivers
+                                    beyond expectations.&quot;
+                                </em>
+                            </div>
+                            <div className="">Colm Campbell</div>
+                            <div className="text-xs">Head of Engineering</div>
+                            <div className="text-xs">The Gym Group</div>
                         </div>
                         <div className="flex items-center flex-col min-w-[200px] max-w-[400px] flex-grow flex-shrink basis-0 mx-2 my-4">
                             <Image
@@ -680,8 +560,8 @@ export default function Home() {
                         Contact
                     </h2>
                     <p>
-                        If you would like to discuss an opportunity or project,
-                        please get in touch.
+                        Interested in collaborating or discussing potential
+                        opportunities? Please contact me.
                     </p>
                     <div className="flex flex-col md:flex-row">
                         <div className="flex-grow">
@@ -738,32 +618,17 @@ export default function Home() {
                             <p>George Wilde</p>
                             <p>
                                 <a
-                                    href="mailto:george@wildecreations.co.uk"
+                                    href="mailto:george@georgewilde.co.uk"
                                     className="text-blue-800"
                                 >
-                                    george@wildecreations.co.uk
+                                    george@georgewilde.co.uk
                                 </a>
                             </p>
                         </div>
                     </div>
                 </section>
             </main>
-            <footer className="w-full mt-6">
-                <div className="bg-gray-800 text-white py-6 px-6">
-                    <p>
-                        &copy; {currentYear} Wilde Creations. All rights
-                        reserved.
-                    </p>
-                </div>
-                <div className="bg-gray-900 text-white py-6 px-6">
-                    <p>
-                        Most of the showcased work displayed on this site was
-                        created while working for past full-time employers or
-                        while under contract to other companies, all of who
-                        solely own the rights to these materials.
-                    </p>
-                </div>
-            </footer>
+            <Footer />
         </>
     );
 }

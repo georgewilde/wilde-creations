@@ -2,6 +2,14 @@ import { BlogPostType } from './blogPost.types';
 
 export const blogPosts: BlogPostType[] = [
     {
+        title: 'Implementing GenAI Solutions in Legacy Systems',
+        description:
+            "Integrating cutting-edge AI capabilities into legacy systems can feel daunting. Many enterprises still rely on ageing monolithic applications that weren't built for today's AI-driven world. Yet modernising everything in one go is often impractical - it's costly, risky, and disruptive. The good news is that with the right approach, you can incrementally layer AI solutions onto legacy infrastructure without a complete overhaul...",
+        link: '/blog/implementing-genai-solutions-in-legacy-systems',
+        icon: 'chat',
+        colour: 'fuchsia-800',
+    },
+    {
         title: 'Transforming Your Digital Strategy with a Headless CMS',
         description:
             'One of the most transformative decisions you can make when evolving your existing systems is to consider a headless CMS approach. This decision is not just about adopting new technology; it’s about future-proofing your organization, enhancing flexibility, and ensuring seamless multi-channel content delivery...',
@@ -12,7 +20,7 @@ export const blogPosts: BlogPostType[] = [
     {
         title: 'Leveraging Data Maturity to Personalize Retail Shopping Experiences',
         description:
-            'In today’s retail environment, personalization is not just a luxury, it’s an expectation. Customers seek experiences that are not only seamless but also uniquely tailored to their preferences and behaviors. For retailers with robust infrastructures, the next frontier is leveraging AI and predictive analytics to enhance personalization and dynamically adjust operational strategies in real time...',
+            "In today's retail environment, personalization is not just a luxury, it's an expectation. Customers seek experiences that are not only seamless but also uniquely tailored to their preferences and behaviors. For retailers with robust infrastructures, the next frontier is leveraging AI and predictive analytics to enhance personalization and dynamically adjust operational strategies in real time...",
         link: 'https://www.ensono.com/insights-and-news/expert-opinions/leveraging-data-maturity-to-personalize-retail-shopping-experiences/',
         icon: 'cart',
         colour: 'blue-800',
@@ -28,7 +36,7 @@ export const blogPosts: BlogPostType[] = [
     {
         title: 'A Guide To Writing Effective User Stories',
         description:
-            'In this guide, I’m going to show you how to write great user stories that get software teams working together to build the things your customers want...',
+            "In this guide, I'm going to show you how to write great user stories that get software teams working together to build the things your customers want...",
         link: 'https://medium.com/@george_wilde/a-guide-to-writing-effective-user-stories-658823dec2e0',
         icon: 'stories',
         colour: 'green-600',
