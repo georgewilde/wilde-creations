@@ -4,8 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import { BlogPost, blogPosts } from '@/components/BlogPost';
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { Footer, Header } from '@/components';
 
 export default function Home() {
     const [isContactMessageShown, setIsContactMessageShown] = useState(false);
